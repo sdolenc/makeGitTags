@@ -1,0 +1,7 @@
+edx-configuration,https://github.com/Microsoft/edx-configuration.git,oxa/master.fic,e5a47bd,oxa_v2.0.0,migrations from edx dogwood to edx ficus. OpenedX on Azure (oxa).
+edx-platform,https://github.com/microsoft/edx-platform.git,oxa/master.fic,622a362,oxa_v2.0.0,migrations from edx dogwood to edx ficus. OpenedX on Azure (oxa).
+edx-theme,https://github.com/microsoft/edx-theme.git,oxa/master.fic,2029a1d,oxa_v2.0.0,migrations from edx dogwood to edx ficus. OpenedX on Azure (oxa).
+oxa_kitchen_sink,https://github.com/Microsoft/oxa_kitchen_sink.git,master,0698a4e,oxa_v2.0.0,migrations from edx dogwood to edx ficus. OpenedX on Azure (oxa).
+oxa-tools,https://github.com/Microsoft/oxa-tools.git,oxa/master.fic,ed1405e,oxa_v2.0.0,migrations from edx dogwood to edx ficus. OpenedX on Azure (oxa).
+oxa-tools-config,https://github.com/microsoft/oxa-tools-config.git,oxa/master.fic,f686d6d2c7c3df41f9503b9c370cf07fbce6376a,oxa_v2.0.0,migrations from edx dogwood to edx ficus. OpenedX on Azure (oxa).
+xblock-azure-media-services,https://github.com/Microsoft/xblock-azure-media-services.git,master,013c958,oxa_v2.0.0,migrations from edx dogwood to edx ficus. OpenedX on Azure (oxa).

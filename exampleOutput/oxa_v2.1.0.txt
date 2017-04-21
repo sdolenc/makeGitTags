@@ -1,0 +1,696 @@
+Script started on Fri 21 Apr 2017 01:04:33 PM PDT
+]0;localstepdo@x1v14stepdo4: ~/e/getAllGitlocalstepdo@x1v14stepdo4:~/e/getAllGit$ exitbash makeTags.sh -t /home/localstepdo/tags/oxa_v2.0.0.csv -r /home/localstepdo/tags/oxa_v2.0.0[1P.01.0[1P[1@1
+bash: makeTags.sh: No such file or directory
+]0;localstepdo@x1v14stepdo4: ~/e/getAllGitlocalstepdo@x1v14stepdo4:~/e/getAllGit$ bash makeTags.sh -t /home/localstepdo/tags/oxa_v2.1.0.csv -r /home/localstepdo/tags/oxa_v2.1.0[C[C[C[C[C[C[C[C[C[1@G[1@i[1@t
++ parse_args -t /home/localstepdo/tags/oxa_v2.1.0.csv -r /home/localstepdo/tags/oxa_v2.1.0
++ [[ 4 -gt 0 ]]
++ echo 'Option -t set with value /home/localstepdo/tags/oxa_v2.1.0.csv'
+Option -t set with value /home/localstepdo/tags/oxa_v2.1.0.csv
++ case "$1" in
++ tagFile=/home/localstepdo/tags/oxa_v2.1.0.csv
++ shift
++ shift
++ [[ 2 -gt 0 ]]
++ echo 'Option -r set with value /home/localstepdo/tags/oxa_v2.1.0'
+Option -r set with value /home/localstepdo/tags/oxa_v2.1.0
++ case "$1" in
++ repoFolder=/home/localstepdo/tags/oxa_v2.1.0
++ shift
++ shift
++ [[ 0 -gt 0 ]]
++ validate_input
++ '[' '!' -d /home/localstepdo/tags/oxa_v2.1.0 ']'
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -f /home/localstepdo/tags/oxa_v2.1.0.csv ']'
++ finalReport=
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ tr , ' '
+++ tr ' ' _
+++ echo 'edx-configuration,https://github.com/Microsoft/edx-configuration.git,oxa/master.fic,e5a47bd,oxa_v2.1.0,regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ subFolder=edx-configuration
++ remoteUrl=https://github.com/Microsoft/edx-configuration.git
++ gitBranch=oxa/master.fic
++ hashValue=e5a47bd
++ newGitTag=oxa_v2.1.0
+++ echo 'regular_production_deployment_in_mid-april_2017._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ echo edx-configuration
+edx-configuration
++ echo https://github.com/Microsoft/edx-configuration.git
+https://github.com/Microsoft/edx-configuration.git
++ echo oxa/master.fic
+oxa/master.fic
++ echo e5a47bd
+e5a47bd
++ echo oxa_v2.1.0
+oxa_v2.1.0
++ echo 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+regular production deployment in mid-april 2017. OpenedX on Azure (oxa).
++ echo
+
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -d edx-configuration ']'
++ cd edx-configuration
++ git fetch
+remote: Counting objects: 2, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  50% (1/2)   Unpacking objects: 100% (2/2)   Unpacking objects: 100% (2/2), done.
+From https://github.com/Microsoft/edx-configuration
+ * [new tag]           oxa_v1.0.0 -> oxa_v1.0.0
+ * [new tag]           oxa_v2.0.0 -> oxa_v2.0.0
+++ git tag
+++ wc -l
+++ grep oxa_v2.1.0
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f e5a47bd
+Note: checking out 'e5a47bd'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at e5a47bd3... Merge pull request #14 from Microsoft/oxa/master.fic.eltonc
+++ git rev-parse HEAD
+++ grep -i e5a47bd
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.0 e5a47bd -m 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
+++ wc -l
+++ grep oxa_v2.1.0
++++ git tag -l --points-at HEAD
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.0.0
+  oxa_v2.1.0'
+++ set -e
+++ '[' -z oxa_v2.0.0 oxa_v2.1.0 ']'
+makeGitTags.sh: line 85: [: oxa_v2.0.0: binary operator expected
+++ echo '  oxa_v2.0.0
+  oxa_v2.1.0'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'Successfully created tag oxa_v2.1.0 at commit e5a47bd' edx-configuration https://github.com/Microsoft/edx-configuration.git
++ report='Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git'
++ echo 'Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git'
+Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
++ finalReport='\n\n  Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git'
++ git push --tags
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 214 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/edx-configuration.git
+ * [new tag]           oxa_v2.1.0 -> oxa_v2.1.0
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'edx-platform,https://github.com/microsoft/edx-platform.git,oxa/master.fic,6dbfd19,oxa_v2.1.0,regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ tr , ' '
+++ tr ' ' _
++ subFolder=edx-platform
++ remoteUrl=https://github.com/microsoft/edx-platform.git
++ gitBranch=oxa/master.fic
++ hashValue=6dbfd19
++ newGitTag=oxa_v2.1.0
+++ echo 'regular_production_deployment_in_mid-april_2017._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ echo edx-platform
+edx-platform
++ echo https://github.com/microsoft/edx-platform.git
+https://github.com/microsoft/edx-platform.git
++ echo oxa/master.fic
+oxa/master.fic
++ echo 6dbfd19
+6dbfd19
++ echo oxa_v2.1.0
+oxa_v2.1.0
++ echo 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+regular production deployment in mid-april 2017. OpenedX on Azure (oxa).
++ echo
+
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -d edx-platform ']'
++ cd edx-platform
++ git fetch
+remote: Counting objects: 11, done.[K
+remote: Compressing objects:   9% (1/11)   [Kremote: Compressing objects:  18% (2/11)   [Kremote: Compressing objects:  27% (3/11)   [Kremote: Compressing objects:  36% (4/11)   [Kremote: Compressing objects:  45% (5/11)   [Kremote: Compressing objects:  54% (6/11)   [Kremote: Compressing objects:  63% (7/11)   [Kremote: Compressing objects:  72% (8/11)   [Kremote: Compressing objects:  81% (9/11)   [Kremote: Compressing objects:  90% (10/11)   [Kremote: Compressing objects: 100% (11/11)   [Kremote: Compressing objects: 100% (11/11), done.[K
+remote: Total 11 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:   9% (1/11)   Unpacking objects:  18% (2/11)   Unpacking objects:  27% (3/11)   Unpacking objects:  36% (4/11)   Unpacking objects:  45% (5/11)   Unpacking objects:  54% (6/11)   Unpacking objects:  63% (7/11)   Unpacking objects:  72% (8/11)   Unpacking objects:  81% (9/11)   Unpacking objects:  90% (10/11)   Unpacking objects: 100% (11/11)   Unpacking objects: 100% (11/11), done.
+From https://github.com/Microsoft/edx-platform
+ * [new branch]            oxa/master.fic_btelnes_forum_voting -> origin/oxa/master.fic_btelnes_forum_voting
+ * [new tag]               oxa_v1.0.0                          -> oxa_v1.0.0
+ * [new tag]               oxa_v2.0.0                          -> oxa_v2.0.0
+++ git tag
+++ grep oxa_v2.1.0
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f 6dbfd19
+Note: checking out '6dbfd19'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 6dbfd19b97... Merge pull request #21 from Microsoft/site_enrollment_mani
+++ git rev-parse HEAD
+++ wc -l
+++ grep -i 6dbfd19
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.0 6dbfd19 -m 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
+++ grep oxa_v2.1.0
+++ wc -l
++++ git tag -l --points-at HEAD
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.1.0'
+++ set -e
+++ '[' -z oxa_v2.1.0 ']'
+++ echo '  oxa_v2.1.0'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'Successfully created tag oxa_v2.1.0 at commit 6dbfd19' edx-platform https://github.com/microsoft/edx-platform.git
++ report='Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git'
++ echo 'Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git'
+Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git
++ finalReport='\n\n  Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git'
++ git push --tags
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 214 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/edx-platform.git
+ * [new tag]               oxa_v2.1.0 -> oxa_v2.1.0
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'edx-theme,https://github.com/microsoft/edx-theme.git,oxa/master.fic,452c02f,oxa_v2.1.0,regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ tr , ' '
+++ tr ' ' _
++ subFolder=edx-theme
++ remoteUrl=https://github.com/microsoft/edx-theme.git
++ gitBranch=oxa/master.fic
++ hashValue=452c02f
++ newGitTag=oxa_v2.1.0
+++ echo 'regular_production_deployment_in_mid-april_2017._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ echo edx-theme
+edx-theme
++ echo https://github.com/microsoft/edx-theme.git
+https://github.com/microsoft/edx-theme.git
++ echo oxa/master.fic
+oxa/master.fic
++ echo 452c02f
+452c02f
++ echo oxa_v2.1.0
+oxa_v2.1.0
++ echo 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+regular production deployment in mid-april 2017. OpenedX on Azure (oxa).
++ echo
+
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -d edx-theme ']'
++ cd edx-theme
++ git fetch
+remote: Counting objects: 16, done.[K
+remote: Compressing objects:   7% (1/13)   [Kremote: Compressing objects:  15% (2/13)   [Kremote: Compressing objects:  23% (3/13)   [Kremote: Compressing objects:  30% (4/13)   [Kremote: Compressing objects:  38% (5/13)   [Kremote: Compressing objects:  46% (6/13)   [Kremote: Compressing objects:  53% (7/13)   [Kremote: Compressing objects:  61% (8/13)   [Kremote: Compressing objects:  69% (9/13)   [Kremote: Compressing objects:  76% (10/13)   [Kremote: Compressing objects:  84% (11/13)   [Kremote: Compressing objects:  92% (12/13)   [Kremote: Compressing objects: 100% (13/13)   [Kremote: Compressing objects: 100% (13/13), done.[K
+remote: Total 16 (delta 1), reused 0 (delta 0), pack-reused 3[K
+Unpacking objects:   6% (1/16)   Unpacking objects:  12% (2/16)   Unpacking objects:  18% (3/16)   Unpacking objects:  25% (4/16)   Unpacking objects:  31% (5/16)   Unpacking objects:  37% (6/16)   Unpacking objects:  43% (7/16)   Unpacking objects:  50% (8/16)   Unpacking objects:  56% (9/16)   Unpacking objects:  62% (10/16)   Unpacking objects:  68% (11/16)   Unpacking objects:  75% (12/16)   Unpacking objects:  81% (13/16)   Unpacking objects:  87% (14/16)   Unpacking objects:  93% (15/16)   Unpacking objects: 100% (16/16)   Unpacking objects: 100% (16/16), done.
+From https://github.com/Microsoft/edx-theme
+ * [new branch]      email_fix_mani -> origin/email_fix_mani
+   d5aa1ec..cbd9a00  oxa/master.fic -> origin/oxa/master.fic
+ * [new tag]         oxa_v1.0.0     -> oxa_v1.0.0
+ * [new tag]         oxa_v2.0.0     -> oxa_v2.0.0
+++ wc -l
+++ grep oxa_v2.1.0
+++ git tag
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f 452c02f
+Note: checking out '452c02f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 452c02f... Merge pull request #71 from Microsoft/faq_mani
+++ git rev-parse HEAD
+++ wc -l
+++ grep -i 452c02f
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.0 452c02f -m 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ grep oxa_v2.1.0
+++ wc -l
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
++++ git tag -l --points-at HEAD
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.1.0'
+++ set -e
+++ '[' -z oxa_v2.1.0 ']'
+++ echo '  oxa_v2.1.0'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'Successfully created tag oxa_v2.1.0 at commit 452c02f' edx-theme https://github.com/microsoft/edx-theme.git
++ report='Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git'
++ echo 'Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git'
+Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git
++ finalReport='\n\n  Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git'
++ git push --tags
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 214 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/edx-theme.git
+ * [new tag]         oxa_v2.1.0 -> oxa_v2.1.0
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ tr , ' '
+++ tr ' ' _
+++ echo 'oxa_kitchen_sink,https://github.com/Microsoft/oxa_kitchen_sink.git,master,0698a4e,oxa_v2.1.0,regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ subFolder=oxa_kitchen_sink
++ remoteUrl=https://github.com/Microsoft/oxa_kitchen_sink.git
++ gitBranch=master
++ hashValue=0698a4e
++ newGitTag=oxa_v2.1.0
+++ echo 'regular_production_deployment_in_mid-april_2017._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ echo oxa_kitchen_sink
+oxa_kitchen_sink
++ echo https://github.com/Microsoft/oxa_kitchen_sink.git
+https://github.com/Microsoft/oxa_kitchen_sink.git
++ echo master
+master
++ echo 0698a4e
+0698a4e
++ echo oxa_v2.1.0
+oxa_v2.1.0
++ echo 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+regular production deployment in mid-april 2017. OpenedX on Azure (oxa).
++ echo
+
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -d oxa_kitchen_sink ']'
++ cd oxa_kitchen_sink
++ git fetch
+remote: Counting objects: 1, done.[K
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects: 100% (1/1)   Unpacking objects: 100% (1/1), done.
+From https://github.com/Microsoft/oxa_kitchen_sink
+ * [new tag]         oxa_v2.0.0 -> oxa_v2.0.0
+++ git tag
+++ grep oxa_v2.1.0
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout master
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
++ git pull
+Already up-to-date.
++ git checkout -f 0698a4e
+Note: checking out '0698a4e'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 0698a4e... Merge pull request #2 from Microsoft/apenddate
+++ git rev-parse HEAD
+++ grep -i 0698a4e
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.0 0698a4e -m 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ grep oxa_v2.1.0
+++ prefix='tag: '
+++ set +e
++++ git tag -l --points-at HEAD
+++ wc -l
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.0.0
+  oxa_v2.1.0'
+++ set -e
+++ '[' -z oxa_v2.0.0 oxa_v2.1.0 ']'
+makeGitTags.sh: line 85: [: oxa_v2.0.0: binary operator expected
+++ echo '  oxa_v2.0.0
+  oxa_v2.1.0'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'Successfully created tag oxa_v2.1.0 at commit 0698a4e' oxa_kitchen_sink https://github.com/Microsoft/oxa_kitchen_sink.git
++ report='Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git'
++ echo 'Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git'
+Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
++ finalReport='\n\n  Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git'
++ git push --tags
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 214 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/oxa_kitchen_sink.git
+ * [new tag]         oxa_v2.1.0 -> oxa_v2.1.0
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'oxa-tools,https://github.com/Microsoft/oxa-tools.git,oxa/master.fic,1b5b6b4,oxa_v2.1.0,regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ tr ' ' _
+++ tr , ' '
++ subFolder=oxa-tools
++ remoteUrl=https://github.com/Microsoft/oxa-tools.git
++ gitBranch=oxa/master.fic
++ hashValue=1b5b6b4
++ newGitTag=oxa_v2.1.0
+++ echo 'regular_production_deployment_in_mid-april_2017._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ echo oxa-tools
+oxa-tools
++ echo https://github.com/Microsoft/oxa-tools.git
+https://github.com/Microsoft/oxa-tools.git
++ echo oxa/master.fic
+oxa/master.fic
++ echo 1b5b6b4
+1b5b6b4
++ echo oxa_v2.1.0
+oxa_v2.1.0
++ echo 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+regular production deployment in mid-april 2017. OpenedX on Azure (oxa).
++ echo
+
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -d oxa-tools ']'
++ cd oxa-tools
++ git fetch
+remote: Counting objects: 25, done.[K
+remote: Compressing objects:   4% (1/25)   [Kremote: Compressing objects:   8% (2/25)   [Kremote: Compressing objects:  12% (3/25)   [Kremote: Compressing objects:  16% (4/25)   [Kremote: Compressing objects:  20% (5/25)   [Kremote: Compressing objects:  24% (6/25)   [Kremote: Compressing objects:  28% (7/25)   [Kremote: Compressing objects:  32% (8/25)   [Kremote: Compressing objects:  36% (9/25)   [Kremote: Compressing objects:  40% (10/25)   [Kremote: Compressing objects:  44% (11/25)   [Kremote: Compressing objects:  48% (12/25)   [Kremote: Compressing objects:  52% (13/25)   [Kremote: Compressing objects:  56% (14/25)   [Kremote: Compressing objects:  60% (15/25)   [Kremote: Compressing objects:  64% (16/25)   [Kremote: Compressing objects:  68% (17/25)   [Kremote: Compressing objects:  72% (18/25)   [Kremote: Compressing objects:  76% (19/25)   [Kremote: Compressing objects:  80% (20/25)   [Kremote: Compressing objects:  84% (21/25)   [Kremote: Compressing objects:  88% (22/25)   [Kremote: Compressing objects:  92% (23/25)   [Kremote: Compressing objects:  96% (24/25)   [Kremote: Compressing objects: 100% (25/25)   [Kremote: Compressing objects: 100% (25/25), done.[K
+Unpacking objects:   4% (1/25)   Unpacking objects:   8% (2/25)   Unpacking objects:  12% (3/25)   Unpacking objects:  16% (4/25)   remote: Total 25 (delta 12), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  20% (5/25)   Unpacking objects:  24% (6/25)   Unpacking objects:  28% (7/25)   Unpacking objects:  32% (8/25)   Unpacking objects:  36% (9/25)   Unpacking objects:  40% (10/25)   Unpacking objects:  44% (11/25)   Unpacking objects:  48% (12/25)   Unpacking objects:  52% (13/25)   Unpacking objects:  56% (14/25)   Unpacking objects:  60% (15/25)   Unpacking objects:  64% (16/25)   Unpacking objects:  68% (17/25)   Unpacking objects:  72% (18/25)   Unpacking objects:  76% (19/25)   Unpacking objects:  80% (20/25)   Unpacking objects:  84% (21/25)   Unpacking objects:  88% (22/25)   Unpacking objects:  92% (23/25)   Unpacking objects:  96% (24/25)   Unpacking objects: 100% (25/25)   Unpacking objects: 100% (25/25), done.
+From https://github.com/Microsoft/oxa-tools
+ * [new branch]      oxa/master.fic.dbRetention -> origin/oxa/master.fic.dbRetention
+ * [new tag]         oxa_v1.0.0                 -> oxa_v1.0.0
+ * [new tag]         oxa_v2.0.0                 -> oxa_v2.0.0
+++ git tag
+++ grep oxa_v2.1.0
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f 1b5b6b4
+Note: checking out '1b5b6b4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 1b5b6b4... Merge pull request #119 from Microsoft/oxa/master.fic.eltonc.clidefault
+++ grep -i 1b5b6b4
+++ git rev-parse HEAD
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.0 1b5b6b4 -m 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ grep oxa_v2.1.0
+++ prefix='tag: '
+++ set +e
++++ git tag -l --points-at HEAD
+++ wc -l
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.1.0'
+++ set -e
+++ '[' -z oxa_v2.1.0 ']'
+++ echo '  oxa_v2.1.0'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'Successfully created tag oxa_v2.1.0 at commit 1b5b6b4' oxa-tools https://github.com/Microsoft/oxa-tools.git
++ report='Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git'
++ echo 'Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git'
+Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git
++ finalReport='\n\n  Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git\n\n  Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git'
++ git push --tags
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 213 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/oxa-tools.git
+ * [new tag]         oxa_v2.1.0 -> oxa_v2.1.0
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'oxa-tools-config,https://github.com/microsoft/oxa-tools-config.git,oxa/master.fic,c2a5717d8cbfa155c1abd5219962f956f604a4d5,oxa_v2.1.0,regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ tr , ' '
+++ tr ' ' _
++ subFolder=oxa-tools-config
++ remoteUrl=https://github.com/microsoft/oxa-tools-config.git
++ gitBranch=oxa/master.fic
++ hashValue=c2a5717d8cbfa155c1abd5219962f956f604a4d5
++ newGitTag=oxa_v2.1.0
+++ echo 'regular_production_deployment_in_mid-april_2017._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ echo oxa-tools-config
+oxa-tools-config
++ echo https://github.com/microsoft/oxa-tools-config.git
+https://github.com/microsoft/oxa-tools-config.git
++ echo oxa/master.fic
+oxa/master.fic
++ echo c2a5717d8cbfa155c1abd5219962f956f604a4d5
+c2a5717d8cbfa155c1abd5219962f956f604a4d5
++ echo oxa_v2.1.0
+oxa_v2.1.0
++ echo 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+regular production deployment in mid-april 2017. OpenedX on Azure (oxa).
++ echo
+
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -d oxa-tools-config ']'
++ cd oxa-tools-config
++ git fetch
+remote: Counting objects: 9, done.[K
+remote: Compressing objects:  11% (1/9)   [Kremote: Compressing objects:  22% (2/9)   [Kremote: Compressing objects:  33% (3/9)   [Kremote: Compressing objects:  44% (4/9)   [Kremote: Compressing objects:  55% (5/9)   [Kremote: Compressing objects:  66% (6/9)   [Kremote: Compressing objects:  77% (7/9)   [Kremote: Compressing objects:  88% (8/9)   [Kremote: Compressing objects: 100% (9/9)   [Kremote: Compressing objects: 100% (9/9), done.[K
+remote: Total 9 (delta 1), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  11% (1/9)   Unpacking objects:  22% (2/9)   Unpacking objects:  33% (3/9)   Unpacking objects:  44% (4/9)   Unpacking objects:  55% (5/9)   Unpacking objects:  66% (6/9)   Unpacking objects:  77% (7/9)   Unpacking objects:  88% (8/9)   Unpacking objects: 100% (9/9)   Unpacking objects: 100% (9/9), done.
+From https://github.com/microsoft/oxa-tools-config
+   90094a8..539b87a  oxa/master.fic.dbRetention -> origin/oxa/master.fic.dbRetention
+ * [new tag]         oxa_v1.0.0                 -> oxa_v1.0.0
+ * [new tag]         oxa_v2.0.0                 -> oxa_v2.0.0
+++ git tag
+++ wc -l
+++ grep oxa_v2.1.0
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f c2a5717d8cbfa155c1abd5219962f956f604a4d5
+Note: checking out 'c2a5717d8cbfa155c1abd5219962f956f604a4d5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at c2a5717... Merge pull request #56 from Microsoft/oxa/master.fic.eltonc.configupdates
+++ git rev-parse HEAD
+++ grep -i c2a5717d8cbfa155c1abd5219962f956f604a4d5
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.0 c2a5717d8cbfa155c1abd5219962f956f604a4d5 -m 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ grep oxa_v2.1.0
+++ wc -l
+++ prefix='tag: '
+++ set +e
++++ git tag -l --points-at HEAD
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.1.0'
+++ set -e
+++ '[' -z oxa_v2.1.0 ']'
+++ echo '  oxa_v2.1.0'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5' oxa-tools-config https://github.com/microsoft/oxa-tools-config.git
++ report='Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git'
++ echo 'Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git'
+Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git
++ finalReport='\n\n  Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git\n\n  Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git\n\n  Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git'
++ git push --tags
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 212 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/microsoft/oxa-tools-config.git
+ * [new tag]         oxa_v2.1.0 -> oxa_v2.1.0
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'xblock-azure-media-services,https://github.com/Microsoft/xblock-azure-media-services.git,master,7df83f1,oxa_v2.1.0,regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ tr , ' '
+++ tr ' ' _
++ subFolder=xblock-azure-media-services
++ remoteUrl=https://github.com/Microsoft/xblock-azure-media-services.git
++ gitBranch=master
++ hashValue=7df83f1
++ newGitTag=oxa_v2.1.0
+++ echo 'regular_production_deployment_in_mid-april_2017._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
++ echo xblock-azure-media-services
+xblock-azure-media-services
++ echo https://github.com/Microsoft/xblock-azure-media-services.git
+https://github.com/Microsoft/xblock-azure-media-services.git
++ echo master
+master
++ echo 7df83f1
+7df83f1
++ echo oxa_v2.1.0
+oxa_v2.1.0
++ echo 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+regular production deployment in mid-april 2017. OpenedX on Azure (oxa).
++ echo
+
++ cd /home/localstepdo/tags/oxa_v2.1.0
++ '[' '!' -d xblock-azure-media-services ']'
++ cd xblock-azure-media-services
++ git fetch
+remote: Counting objects: 1, done.[K
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects: 100% (1/1)   Unpacking objects: 100% (1/1), done.
+From https://github.com/Microsoft/xblock-azure-media-services
+ * [new tag]         oxa_v2.0.0 -> oxa_v2.0.0
+++ grep oxa_v2.1.0
+++ wc -l
+++ git tag
++ count=0
++ ((  0 > 0  ))
++ git checkout master
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
++ git pull
+Already up-to-date.
++ git checkout -f 7df83f1
+Note: checking out '7df83f1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 7df83f1... support for more than one video per page/unit (#26)
+++ git rev-parse HEAD
+++ grep -i 7df83f1
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.0 7df83f1 -m 'regular production deployment in mid-april 2017. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
+++ wc -l
+++ grep oxa_v2.1.0
++++ sed -e 's/^/  /'
++++ git tag -l --points-at HEAD
+++ tagInfo='  oxa_v2.1.0'
+++ set -e
+++ '[' -z oxa_v2.1.0 ']'
+++ echo '  oxa_v2.1.0'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'Successfully created tag oxa_v2.1.0 at commit 7df83f1' xblock-azure-media-services https://github.com/Microsoft/xblock-azure-media-services.git
++ report='Successfully created tag oxa_v2.1.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git'
++ echo 'Successfully created tag oxa_v2.1.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git'
+Successfully created tag oxa_v2.1.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
++ finalReport='\n\n  Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git\n\n  Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git\n\n  Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git\n\n  Successfully created tag oxa_v2.1.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git'
++ git push --tags
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 214 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/xblock-azure-media-services.git
+ * [new tag]         oxa_v2.1.0 -> oxa_v2.1.0
++ read entry
++ echo
+
++ echo Summary:
+Summary:
++ echo -e '\n\n' Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: 'https://github.com/Microsoft/edx-configuration.git\n\n' Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: 'https://github.com/microsoft/edx-platform.git\n\n' Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: 'https://github.com/microsoft/edx-theme.git\n\n' Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: 'https://github.com/Microsoft/oxa_kitchen_sink.git\n\n' Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: 'https://github.com/Microsoft/oxa-tools.git\n\n' Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: 'https://github.com/microsoft/oxa-tools-config.git\n\n' Successfully created tag oxa_v2.1.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
+
+
+ Successfully created tag oxa_v2.1.0 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
+
+ Successfully created tag oxa_v2.1.0 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git
+
+ Successfully created tag oxa_v2.1.0 at commit 452c02f on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git
+
+ Successfully created tag oxa_v2.1.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
+
+ Successfully created tag oxa_v2.1.0 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git
+
+ Successfully created tag oxa_v2.1.0 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git
+
+ Successfully created tag oxa_v2.1.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
++ echo
+
+]0;localstepdo@x1v14stepdo4: ~/e/getAllGitlocalstepdo@x1v14stepdo4:~/e/getAllGit$ exit
+exit
+
+Script done on Fri 21 Apr 2017 01:07:21 PM PDT
