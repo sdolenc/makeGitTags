@@ -1,0 +1,7 @@
+edx-configuration,https://github.com/Microsoft/edx-configuration.git,oxa/master.fic,e5a47bd,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).
+edx-platform,https://github.com/microsoft/edx-platform.git,oxa/master.fic,6dbfd19,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).
+edx-theme,https://github.com/microsoft/edx-theme.git,oxa/master.fic,feefa37eab798aab053a9b7c0f809fec23913660,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).
+oxa_kitchen_sink,https://github.com/Microsoft/oxa_kitchen_sink.git,master,0698a4e,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).
+oxa-tools,https://github.com/Microsoft/oxa-tools.git,oxa/master.fic,1b5b6b4,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).
+oxa-tools-config,https://github.com/microsoft/oxa-tools-config.git,oxa/master.fic,c2a5717d8cbfa155c1abd5219962f956f604a4d5,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).
+xblock-azure-media-services,https://github.com/Microsoft/xblock-azure-media-services.git,master,7df83f1,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).

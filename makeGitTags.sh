@@ -20,7 +20,6 @@ help()
     echo "      <subFolder>,<remoteGitUrl>,<branch>,<commitHash>,<newTag>,<tagDesc>"
     echo "          Note: delimeters are commas so values shouldn't contain them"
     echo "          Note: only tag descriptions should have spaces"
-    echo "          Tip: put token in remoteGitUrl https://token@github.com/org/repo , but not rquired"
     echo
     echo "Recommended: please use full paths insted of relative"
     exit 2
@@ -99,7 +98,12 @@ finalReport=
 
 make_report()
 {
-    report="$1 on local: $2 and/or remote: $3"
+    report=""
+    if [ -z $3 ]; then
+        report="$1"
+    else
+        report="$1 on local: $2 and/or remote: $3"
+    fi
 
     # Log to console immediately
     echo "$report"
@@ -135,8 +139,14 @@ while read entry; do
     cd $subFolder
 
     # Important if the repo aleady existed locally:
-    #todo:1 verify upstream matches $remoteUrl
+    # 1 verify upstream matches $remoteUrl
+    actualRemote=`git config --get remote.origin.url | grep -o 'github.com.*' | sed 's/\.git//g'`
+    count=`echo $remoteUrl | grep $actualRemote | wc -l`
+    if [[ "$count" -eq "0" ]]; then
+        make_report "FAILED because local $subFolder is not pointed to expected remote $remoteUrl"
 
+        continue
+    fi
     # 2 Sync with remote
     git fetch
 
@@ -156,7 +166,7 @@ while read entry; do
     # Does long hash contain hash we tried to checkout?
     count=`git rev-parse HEAD | grep -i $hashValue | wc -l`
     if [[ "$count" -eq "0" ]]; then
-        make_report "Failed to checkout hash $hashValue" "$subFolder" "$remoteUrl"
+        make_report "FAILED to checkout hash $hashValue" "$subFolder" "$remoteUrl"
 
         continue
     fi
@@ -167,11 +177,11 @@ while read entry; do
     # Was tag created locally?
     count=`get_current_local_tags | grep $newGitTag | wc -l`
     if [[ "$count" -eq "0" ]]; then
-        make_report "Faled to create tag $newGitTag" "$subFolder" "$remoteUrl"
+        make_report "FAILED to create tag $newGitTag" "$subFolder" "$remoteUrl"
 
         continue
     else
-        make_report "Successfully created tag $newGitTag at commit $hashValue" "$subFolder" "$remoteUrl"
+        make_report "SUCCESSFULLY created tag $newGitTag at commit $hashValue" "$subFolder" "$remoteUrl"
     fi
 
     # Push tag to upstream

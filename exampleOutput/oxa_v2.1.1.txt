@@ -1,0 +1,711 @@
+Script started on Mon 24 Apr 2017 02:52:31 PM PDT
+]0;localstepdo@x1v16stepdo1: ~/tags/makeGitTagslocalstepdo@x1v16stepdo1:~/tags/makeGitTags$ exitbash makeGitTags.sh -t /home/localstepdo/tags/makeGitTags/exampleInput/oxa_v2.1.1.csv -r /home/localstepdo/tags/2.1.1[K[K[K[K[Koxa_v2.1.1
++ parse_args -t /home/localstepdo/tags/makeGitTags/exampleInput/oxa_v2.1.1.csv -r /home/localstepdo/tags/oxa_v2.1.1
++ [[ 4 -gt 0 ]]
++ echo 'Option -t set with value /home/localstepdo/tags/makeGitTags/exampleInput/oxa_v2.1.1.csv'
+Option -t set with value /home/localstepdo/tags/makeGitTags/exampleInput/oxa_v2.1.1.csv
++ case "$1" in
++ tagFile=/home/localstepdo/tags/makeGitTags/exampleInput/oxa_v2.1.1.csv
++ shift
++ shift
++ [[ 2 -gt 0 ]]
++ echo 'Option -r set with value /home/localstepdo/tags/oxa_v2.1.1'
+Option -r set with value /home/localstepdo/tags/oxa_v2.1.1
++ case "$1" in
++ repoFolder=/home/localstepdo/tags/oxa_v2.1.1
++ shift
++ shift
++ [[ 0 -gt 0 ]]
++ validate_input
++ '[' '!' -d /home/localstepdo/tags/oxa_v2.1.1 ']'
++ mkdir -p /home/localstepdo/tags/oxa_v2.1.1
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -f /home/localstepdo/tags/makeGitTags/exampleInput/oxa_v2.1.1.csv ']'
++ finalReport=
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'edx-configuration,https://github.com/Microsoft/edx-configuration.git,oxa/master.fic,e5a47bd,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ tr , ' '
+++ tr ' ' _
++ subFolder=edx-configuration
++ remoteUrl=https://github.com/Microsoft/edx-configuration.git
++ gitBranch=oxa/master.fic
++ hashValue=e5a47bd
++ newGitTag=oxa_v2.1.1
+++ echo 'minor_prod_deployment_on_2017-04-24._Email_content_and_styling._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -d edx-configuration ']'
++ git clone https://github.com/Microsoft/edx-configuration.git edx-configuration
+Cloning into 'edx-configuration'...
+remote: Counting objects: 62543, done.[K
+remote: Compressing objects:  20% (1/5)   [Kremote: Compressing objects:  40% (2/5)   [Kremote: Compressing objects:  60% (3/5)   [Kremote: Compressing objects:  80% (4/5)   [Kremote: Compressing objects: 100% (5/5)   [Kremote: Compressing objects: 100% (5/5), done.[K
+Receiving objects:   0% (1/62543)   Receiving objects:   1% (626/62543)   Receiving objects:   2% (1251/62543)   Receiving objects:   3% (1877/62543)   Receiving objects:   4% (2502/62543)   Receiving objects:   5% (3128/62543)   Receiving objects:   6% (3753/62543)   Receiving objects:   7% (4379/62543)   Receiving objects:   8% (5004/62543)   Receiving objects:   9% (5629/62543)   Receiving objects:  10% (6255/62543)   Receiving objects:  11% (6880/62543)   Receiving objects:  12% (7506/62543)   Receiving objects:  13% (8131/62543)   Receiving objects:  14% (8757/62543)   Receiving objects:  15% (9382/62543)   Receiving objects:  16% (10007/62543)   Receiving objects:  17% (10633/62543)   Receiving objects:  18% (11258/62543)   Receiving objects:  19% (11884/62543)   Receiving objects:  20% (12509/62543)   Receiving objects:  21% (13135/62543)   Receiving objects:  22% (13760/62543)   Receiving objects:  23% (14385/62543)   Receiving objects:  24% (15011/62543)   Receiving objects:  25% (15636/62543)   Receiving objects:  26% (16262/62543)   Receiving objects:  27% (16887/62543)   Receiving objects:  28% (17513/62543)   Receiving objects:  29% (18138/62543)   Receiving objects:  30% (18763/62543)   Receiving objects:  31% (19389/62543)   Receiving objects:  32% (20014/62543)   Receiving objects:  33% (20640/62543)   Receiving objects:  34% (21265/62543)   Receiving objects:  35% (21891/62543)   Receiving objects:  36% (22516/62543)   Receiving objects:  37% (23141/62543)   Receiving objects:  38% (23767/62543)   Receiving objects:  39% (24392/62543)   Receiving objects:  40% (25018/62543)   Receiving objects:  41% (25643/62543)   Receiving objects:  42% (26269/62543)   Receiving objects:  43% (26894/62543)   Receiving objects:  44% (27519/62543)   Receiving objects:  45% (28145/62543)   Receiving objects:  46% (28770/62543)   Receiving objects:  47% (29396/62543)   Receiving objects:  48% (30021/62543)   Receiving objects:  49% (30647/62543)   Receiving objects:  50% (31272/62543)   Receiving objects:  51% (31897/62543)   Receiving objects:  52% (32523/62543)   Receiving objects:  53% (33148/62543)   Receiving objects:  54% (33774/62543)   Receiving objects:  55% (34399/62543)   Receiving objects:  56% (35025/62543)   Receiving objects:  57% (35650/62543)   Receiving objects:  58% (36275/62543)   Receiving objects:  59% (36901/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  60% (37526/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  61% (38152/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  62% (38777/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  63% (39403/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  64% (40028/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  65% (40653/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  66% (41279/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  67% (41904/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  68% (42530/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  69% (43155/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  70% (43781/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  71% (44406/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  72% (45031/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  73% (45657/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  74% (46282/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  75% (46908/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  76% (47533/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  77% (48159/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  78% (48784/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  79% (49409/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  80% (50035/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  81% (50660/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  82% (51286/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  83% (51911/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  84% (52537/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  85% (53162/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  86% (53787/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  87% (54413/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  88% (55038/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  89% (55664/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  90% (56289/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  91% (56915/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  92% (57540/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  93% (58165/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  94% (58791/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  95% (59416/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  96% (60042/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  97% (60667/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  98% (61293/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects:  99% (61918/62543), 7.53 MiB | 15.05 MiB/s   remote: Total 62543 (delta 0), reused 0 (delta 0), pack-reused 62538[K
+Receiving objects: 100% (62543/62543), 7.53 MiB | 15.05 MiB/s   Receiving objects: 100% (62543/62543), 11.62 MiB | 15.05 MiB/s, done.
+Resolving deltas:   0% (0/33161)   Resolving deltas:   1% (332/33161)   Resolving deltas:   2% (664/33161)   Resolving deltas:   3% (1201/33161)   Resolving deltas:   4% (1350/33161)   Resolving deltas:   5% (1662/33161)   Resolving deltas:   6% (1990/33161)   Resolving deltas:   7% (2322/33161)   Resolving deltas:   8% (2657/33161)   Resolving deltas:   9% (3070/33161)   Resolving deltas:  10% (3321/33161)   Resolving deltas:  11% (3687/33161)   Resolving deltas:  12% (4002/33161)   Resolving deltas:  13% (4342/33161)   Resolving deltas:  14% (4646/33161)   Resolving deltas:  15% (4993/33161)   Resolving deltas:  16% (5312/33161)   Resolving deltas:  17% (5656/33161)   Resolving deltas:  18% (6056/33161)   Resolving deltas:  19% (6319/33161)   Resolving deltas:  20% (6650/33161)   Resolving deltas:  21% (6966/33161)   Resolving deltas:  22% (7298/33161)   Resolving deltas:  23% (7655/33161)   Resolving deltas:  24% (7960/33161)   Resolving deltas:  25% (8322/33161)   Resolving deltas:  26% (8905/33161)   Resolving deltas:  27% (9040/33161)   Resolving deltas:  28% (9347/33161)   Resolving deltas:  29% (9629/33161)   Resolving deltas:  30% (10110/33161)   Resolving deltas:  31% (10356/33161)   Resolving deltas:  33% (11270/33161)   Resolving deltas:  34% (11277/33161)   Resolving deltas:  35% (11729/33161)   Resolving deltas:  36% (11939/33161)   Resolving deltas:  37% (12392/33161)   Resolving deltas:  38% (12736/33161)   Resolving deltas:  39% (13001/33161)   Resolving deltas:  40% (13267/33161)   Resolving deltas:  41% (13639/33161)   Resolving deltas:  42% (14174/33161)   Resolving deltas:  43% (14271/33161)   Resolving deltas:  44% (14597/33161)   Resolving deltas:  45% (14956/33161)   Resolving deltas:  46% (15287/33161)   Resolving deltas:  47% (15685/33161)   Resolving deltas:  49% (16335/33161)   Resolving deltas:  50% (16647/33161)   Resolving deltas:  51% (16965/33161)   Resolving deltas:  52% (17363/33161)   Resolving deltas:  53% (17636/33161)   Resolving deltas:  54% (17932/33161)   Resolving deltas:  55% (18472/33161)   Resolving deltas:  56% (18613/33161)   Resolving deltas:  57% (18904/33161)   Resolving deltas:  58% (19259/33161)   Resolving deltas:  60% (20080/33161)   Resolving deltas:  61% (20230/33161)   Resolving deltas:  62% (20614/33161)   Resolving deltas:  63% (20895/33161)   Resolving deltas:  64% (21227/33161)   Resolving deltas:  65% (21618/33161)   Resolving deltas:  66% (21984/33161)   Resolving deltas:  68% (22556/33161)   Resolving deltas:  69% (22884/33161)   Resolving deltas:  70% (23215/33161)   Resolving deltas:  71% (23545/33161)   Resolving deltas:  72% (23893/33161)   Resolving deltas:  73% (24498/33161)   Resolving deltas:  74% (24546/33161)   Resolving deltas:  75% (25050/33161)   Resolving deltas:  76% (25218/33161)   Resolving deltas:  77% (25534/33161)   Resolving deltas:  78% (25897/33161)   Resolving deltas:  79% (26209/33161)   Resolving deltas:  80% (26537/33161)   Resolving deltas:  81% (26863/33161)   Resolving deltas:  82% (27250/33161)   Resolving deltas:  83% (27528/33161)   Resolving deltas:  84% (27857/33161)   Resolving deltas:  85% (28202/33161)   Resolving deltas:  86% (28536/33161)   Resolving deltas:  87% (28865/33161)   Resolving deltas:  88% (29240/33161)   Resolving deltas:  89% (29524/33161)   Resolving deltas:  90% (29846/33161)   Resolving deltas:  91% (30178/33161)   Resolving deltas:  92% (30510/33161)   Resolving deltas:  93% (30840/33161)   Resolving deltas:  94% (31185/33161)   Resolving deltas:  95% (31509/33161)   Resolving deltas:  96% (31844/33161)   Resolving deltas:  97% (32168/33161)   Resolving deltas:  98% (32498/33161)   Resolving deltas:  99% (32835/33161)   Resolving deltas: 100% (33161/33161)   Resolving deltas: 100% (33161/33161), done.
++ cd edx-configuration
+++ git config --get remote.origin.url
+++ grep -o 'github.com.*'
+++ sed 's/\.git//g'
++ actualRemote=github.com/Microsoft/edx-configuration
+++ echo https://github.com/Microsoft/edx-configuration.git
+++ grep github.com/Microsoft/edx-configuration
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git fetch
+++ grep oxa_v2.1.1
+++ git tag
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f e5a47bd
+Note: checking out 'e5a47bd'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at e5a47bd3... Merge pull request #14 from Microsoft/oxa/master.fic.eltonc
+++ git rev-parse HEAD
+++ grep -i e5a47bd
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.1 e5a47bd -m 'minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
++++ git tag -l --points-at HEAD
++++ sed -e 's/^/  /'
+++ wc -l
+++ grep oxa_v2.1.1
+++ tagInfo='  oxa_v2.0.0
+  oxa_v2.1.0
+  oxa_v2.1.1'
+++ set -e
+++ '[' -z '  oxa_v2.0.0
+  oxa_v2.1.0
+  oxa_v2.1.1' ']'
+++ echo '  oxa_v2.0.0
+  oxa_v2.1.0
+  oxa_v2.1.1'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd' edx-configuration https://github.com/Microsoft/edx-configuration.git
++ report=
++ '[' -z https://github.com/Microsoft/edx-configuration.git ']'
++ report='SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git'
++ echo 'SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git'
+SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
++ finalReport='\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git'
++ git push --tags
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 222 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/edx-configuration.git
+ * [new tag]           oxa_v2.1.1 -> oxa_v2.1.1
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ tr , ' '
+++ tr ' ' _
+++ echo 'edx-platform,https://github.com/microsoft/edx-platform.git,oxa/master.fic,6dbfd19,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ subFolder=edx-platform
++ remoteUrl=https://github.com/microsoft/edx-platform.git
++ gitBranch=oxa/master.fic
++ hashValue=6dbfd19
++ newGitTag=oxa_v2.1.1
+++ tr _ ' '
+++ echo 'minor_prod_deployment_on_2017-04-24._Email_content_and_styling._OpenedX_on_Azure_(oxa).'
++ tagMessage='minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -d edx-platform ']'
++ git clone https://github.com/microsoft/edx-platform.git edx-platform
+Cloning into 'edx-platform'...
+remote: Counting objects: 467230, done.[K
+remote: Compressing objects:   0% (1/427)   [Kremote: Compressing objects:   1% (5/427)   [Kremote: Compressing objects:   2% (9/427)   [Kremote: Compressing objects:   3% (13/427)   [Kremote: Compressing objects:   4% (18/427)   [Kremote: Compressing objects:   5% (22/427)   [Kremote: Compressing objects:   6% (26/427)   [Kremote: Compressing objects:   7% (30/427)   [Kremote: Compressing objects:   8% (35/427)   [Kremote: Compressing objects:   9% (39/427)   [Kremote: Compressing objects:  10% (43/427)   [Kremote: Compressing objects:  11% (47/427)   [Kremote: Compressing objects:  12% (52/427)   [Kremote: Compressing objects:  13% (56/427)   [Kremote: Compressing objects:  14% (60/427)   [Kremote: Compressing objects:  15% (65/427)   [Kremote: Compressing objects:  16% (69/427)   [Kremote: Compressing objects:  17% (73/427)   [Kremote: Compressing objects:  18% (77/427)   [Kremote: Compressing objects:  19% (82/427)   [Kremote: Compressing objects:  20% (86/427)   [Kremote: Compressing objects:  21% (90/427)   [Kremote: Compressing objects:  22% (94/427)   [Kremote: Compressing objects:  23% (99/427)   [Kremote: Compressing objects:  24% (103/427)   [Kremote: Compressing objects:  25% (107/427)   [Kremote: Compressing objects:  26% (112/427)   [Kremote: Compressing objects:  27% (116/427)   [Kremote: Compressing objects:  28% (120/427)   [Kremote: Compressing objects:  29% (124/427)   [Kremote: Compressing objects:  30% (129/427)   [Kremote: Compressing objects:  31% (133/427)   [Kremote: Compressing objects:  32% (137/427)   [Kremote: Compressing objects:  33% (141/427)   [Kremote: Compressing objects:  34% (146/427)   [Kremote: Compressing objects:  35% (150/427)   [Kremote: Compressing objects:  36% (154/427)   [Kremote: Compressing objects:  37% (158/427)   [Kremote: Compressing objects:  38% (163/427)   [Kremote: Compressing objects:  39% (167/427)   [Kremote: Compressing objects:  40% (171/427)   [Kremote: Compressing objects:  41% (176/427)   [Kremote: Compressing objects:  42% (180/427)   [Kremote: Compressing objects:  43% (184/427)   [Kremote: Compressing objects:  44% (188/427)   [Kremote: Compressing objects:  45% (193/427)   [Kremote: Compressing objects:  46% (197/427)   [Kremote: Compressing objects:  47% (201/427)   [Kremote: Compressing objects:  48% (205/427)   [Kremote: Compressing objects:  49% (210/427)   [Kremote: Compressing objects:  50% (214/427)   [Kremote: Compressing objects:  51% (218/427)   [Kremote: Compressing objects:  52% (223/427)   [Kremote: Compressing objects:  53% (227/427)   [Kremote: Compressing objects:  54% (231/427)   [Kremote: Compressing objects:  55% (235/427)   [Kremote: Compressing objects:  56% (240/427)   [Kremote: Compressing objects:  57% (244/427)   [Kremote: Compressing objects:  58% (248/427)   [Kremote: Compressing objects:  59% (252/427)   [Kremote: Compressing objects:  60% (257/427)   [Kremote: Compressing objects:  61% (261/427)   [Kremote: Compressing objects:  62% (265/427)   [Kremote: Compressing objects:  63% (270/427)   [Kremote: Compressing objects:  64% (274/427)   [Kremote: Compressing objects:  65% (278/427)   [Kremote: Compressing objects:  66% (282/427)   [Kremote: Compressing objects:  67% (287/427)   [Kremote: Compressing objects:  68% (291/427)   [Kremote: Compressing objects:  69% (295/427)   [Kremote: Compressing objects:  70% (299/427)   [Kremote: Compressing objects:  71% (304/427)   [Kremote: Compressing objects:  72% (308/427)   [Kremote: Compressing objects:  73% (312/427)   [Kremote: Compressing objects:  74% (316/427)   [Kremote: Compressing objects:  75% (321/427)   [Kremote: Compressing objects:  76% (325/427)   [Kremote: Compressing objects:  77% (329/427)   [Kremote: Compressing objects:  78% (334/427)   [Kremote: Compressing objects:  79% (338/427)   [Kremote: Compressing objects:  80% (342/427)   [Kremote: Compressing objects:  81% (346/427)   [Kremote: Compressing objects:  82% (351/427)   [Kremote: Compressing objects:  83% (355/427)   [Kremote: Compressing objects:  84% (359/427)   [Kremote: Compressing objects:  85% (363/427)   [Kremote: Compressing objects:  86% (368/427)   [Kremote: Compressing objects:  87% (372/427)   [Kremote: Compressing objects:  88% (376/427)   [Kremote: Compressing objects:  89% (381/427)   [Kremote: Compressing objects:  90% (385/427)   [Kremote: Compressing objects:  91% (389/427)   [Kremote: Compressing objects:  92% (393/427)   [Kremote: Compressing objects:  93% (398/427)   [Kremote: Compressing objects:  94% (402/427)   [Kremote: Compressing objects:  95% (406/427)   [Kremote: Compressing objects:  96% (410/427)   [Kremote: Compressing objects:  97% (415/427)   [Kremote: Compressing objects:  98% (419/427)   [Kremote: Compressing objects:  99% (423/427)   [Kremote: Compressing objects: 100% (427/427)   [Kremote: Compressing objects: 100% (427/427), done.[K
+Receiving objects:   0% (1/467230)   Receiving objects:   1% (4673/467230)   Receiving objects:   2% (9345/467230)   Receiving objects:   3% (14017/467230)   Receiving objects:   4% (18690/467230), 3.77 MiB | 7.53 MiB/s   Receiving objects:   5% (23362/467230), 3.77 MiB | 7.53 MiB/s   Receiving objects:   6% (28034/467230), 3.77 MiB | 7.53 MiB/s   Receiving objects:   7% (32707/467230), 3.77 MiB | 7.53 MiB/s   Receiving objects:   7% (34035/467230), 3.77 MiB | 7.53 MiB/s   Receiving objects:   8% (37379/467230), 7.16 MiB | 7.15 MiB/s   Receiving objects:   9% (42051/467230), 7.16 MiB | 7.15 MiB/s   Receiving objects:  10% (46723/467230), 7.16 MiB | 7.15 MiB/s   Receiving objects:  10% (50332/467230), 17.52 MiB | 8.76 MiB/s   Receiving objects:  11% (51396/467230), 17.52 MiB | 8.76 MiB/s   Receiving objects:  11% (53056/467230), 36.37 MiB | 12.12 MiB/s   Receiving objects:  12% (56068/467230), 36.37 MiB | 12.12 MiB/s   Receiving objects:  13% (60740/467230), 36.37 MiB | 12.12 MiB/s   Receiving objects:  13% (64453/467230), 62.07 MiB | 15.52 MiB/s   Receiving objects:  14% (65413/467230), 76.65 MiB | 17.03 MiB/s   Receiving objects:  14% (70053/467230), 88.74 MiB | 18.88 MiB/s   Receiving objects:  15% (70085/467230), 88.74 MiB | 18.88 MiB/s   Receiving objects:  16% (74757/467230), 101.58 MiB | 20.98 MiB/s   Receiving objects:  16% (76164/467230), 101.58 MiB | 20.98 MiB/s   Receiving objects:  17% (79430/467230), 113.04 MiB | 22.74 MiB/s   Receiving objects:  18% (84102/467230), 122.69 MiB | 23.37 MiB/s   Receiving objects:  18% (84859/467230), 122.69 MiB | 23.37 MiB/s   Receiving objects:  19% (88774/467230), 145.77 MiB | 24.31 MiB/s   Receiving objects:  19% (89678/467230), 145.77 MiB | 24.31 MiB/s   Receiving objects:  20% (93446/467230), 159.03 MiB | 24.55 MiB/s   Receiving objects:  20% (97579/467230), 189.97 MiB | 25.18 MiB/s   Receiving objects:  21% (98119/467230), 189.97 MiB | 25.18 MiB/s   Receiving objects:  21% (101581/467230), 233.60 MiB | 29.34 MiB/s   Receiving objects:  22% (102791/467230), 233.60 MiB | 29.34 MiB/s   Receiving objects:  23% (107463/467230), 252.21 MiB | 30.93 MiB/s   Receiving objects:  23% (108632/467230), 252.21 MiB | 30.93 MiB/s   Receiving objects:  24% (112136/467230), 263.82 MiB | 31.36 MiB/s   Receiving objects:  25% (116808/467230), 281.82 MiB | 32.81 MiB/s   Receiving objects:  25% (120970/467230), 281.82 MiB | 32.81 MiB/s   Receiving objects:  26% (121480/467230), 291.54 MiB | 32.37 MiB/s   Receiving objects:  27% (126153/467230), 291.54 MiB | 32.37 MiB/s   Receiving objects:  28% (130825/467230), 302.23 MiB | 31.81 MiB/s   Receiving objects:  29% (135497/467230), 302.23 MiB | 31.81 MiB/s   Receiving objects:  30% (140169/467230), 302.23 MiB | 31.81 MiB/s   Receiving objects:  31% (144842/467230), 302.23 MiB | 31.81 MiB/s   Receiving objects:  31% (148477/467230), 302.23 MiB | 31.81 MiB/s   Receiving objects:  32% (149514/467230), 314.86 MiB | 32.34 MiB/s   Receiving objects:  33% (154186/467230), 314.86 MiB | 32.34 MiB/s   Receiving objects:  34% (158859/467230), 331.61 MiB | 31.45 MiB/s   Receiving objects:  35% (163531/467230), 331.61 MiB | 31.45 MiB/s   Receiving objects:  36% (168203/467230), 331.61 MiB | 31.45 MiB/s   Receiving objects:  36% (168781/467230), 331.61 MiB | 31.45 MiB/s   Receiving objects:  37% (172876/467230), 342.73 MiB | 29.91 MiB/s   Receiving objects:  38% (177548/467230), 342.73 MiB | 29.91 MiB/s   Receiving objects:  39% (182220/467230), 342.73 MiB | 29.91 MiB/s   Receiving objects:  40% (186892/467230), 342.73 MiB | 29.91 MiB/s   Receiving objects:  41% (191565/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  42% (196237/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  43% (200909/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  44% (205582/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  45% (210254/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  46% (214926/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  47% (219599/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  48% (224271/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  48% (225793/467230), 357.86 MiB | 27.59 MiB/s   Receiving objects:  49% (228943/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  50% (233615/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  51% (238288/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  52% (242960/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  53% (247632/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  54% (252305/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  55% (256977/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  56% (261649/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  57% (266322/467230), 371.36 MiB | 26.46 MiB/s   Receiving objects:  58% (270994/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  59% (275666/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  60% (280338/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  61% (285011/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  62% (289683/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  63% (294355/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  64% (299028/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  64% (300690/467230), 383.66 MiB | 26.61 MiB/s   Receiving objects:  65% (303700/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  66% (308372/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  67% (313045/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  68% (317717/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  69% (322389/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  70% (327061/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  71% (331734/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  72% (336406/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  73% (341078/467230), 394.78 MiB | 25.06 MiB/s   Receiving objects:  74% (345751/467230), 408.16 MiB | 25.89 MiB/s   Receiving objects:  75% (350423/467230), 408.16 MiB | 25.89 MiB/s   Receiving objects:  76% (355095/467230), 408.16 MiB | 25.89 MiB/s   Receiving objects:  77% (359768/467230), 408.16 MiB | 25.89 MiB/s   Receiving objects:  77% (363035/467230), 408.16 MiB | 25.89 MiB/s   Receiving objects:  78% (364440/467230), 418.61 MiB | 25.83 MiB/s   Receiving objects:  79% (369112/467230), 418.61 MiB | 25.83 MiB/s   Receiving objects:  80% (373784/467230), 418.61 MiB | 25.83 MiB/s   Receiving objects:  81% (378457/467230), 418.61 MiB | 25.83 MiB/s   Receiving objects:  82% (383129/467230), 418.61 MiB | 25.83 MiB/s   Receiving objects:  83% (387801/467230), 432.75 MiB | 26.18 MiB/s   Receiving objects:  84% (392474/467230), 432.75 MiB | 26.18 MiB/s   Receiving objects:  84% (393585/467230), 441.89 MiB | 24.49 MiB/s   Receiving objects:  84% (394078/467230), 449.34 MiB | 23.67 MiB/s   Receiving objects:  84% (395315/467230), 465.50 MiB | 20.90 MiB/s   Receiving objects:  84% (396076/467230), 484.21 MiB | 19.87 MiB/s   Receiving objects:  85% (397146/467230), 509.96 MiB | 20.30 MiB/s   Receiving objects:  85% (398222/467230), 509.96 MiB | 20.30 MiB/s   Receiving objects:  85% (401128/467230), 538.42 MiB | 21.45 MiB/s   Receiving objects:  86% (401818/467230), 551.36 MiB | 22.67 MiB/s   Receiving objects:  86% (404204/467230), 561.19 MiB | 23.19 MiB/s   Receiving objects:  87% (406491/467230), 582.74 MiB | 24.02 MiB/s   Receiving objects:  87% (408071/467230), 582.74 MiB | 24.02 MiB/s   Receiving objects:  88% (411163/467230), 604.62 MiB | 24.10 MiB/s   Receiving objects:  88% (411802/467230), 604.62 MiB | 24.10 MiB/s   Receiving objects:  89% (415835/467230), 626.78 MiB | 22.24 MiB/s   Receiving objects:  89% (416981/467230), 626.78 MiB | 22.24 MiB/s   Receiving objects:  90% (420507/467230), 652.08 MiB | 22.38 MiB/s   Receiving objects:  91% (425180/467230), 652.08 MiB | 22.38 MiB/s   Receiving objects:  91% (425593/467230), 652.08 MiB | 22.38 MiB/s   Receiving objects:  92% (429852/467230), 662.68 MiB | 22.54 MiB/s   Receiving objects:  93% (434524/467230), 674.71 MiB | 22.47 MiB/s   Receiving objects:  93% (437504/467230), 674.71 MiB | 22.47 MiB/s   Receiving objects:  94% (439197/467230), 687.26 MiB | 23.21 MiB/s   Receiving objects:  95% (443869/467230), 698.25 MiB | 23.46 MiB/s   Receiving objects:  95% (445083/467230), 698.25 MiB | 23.46 MiB/s   Receiving objects:  96% (448541/467230), 712.68 MiB | 24.00 MiB/s   Receiving objects:  97% (453214/467230), 724.83 MiB | 24.26 MiB/s   Receiving objects:  98% (457886/467230), 724.83 MiB | 24.26 MiB/s   Receiving objects:  98% (461404/467230), 724.83 MiB | 24.26 MiB/s   Receiving objects:  99% (462558/467230), 741.16 MiB | 25.40 MiB/s   remote: Total 467230 (delta 765), reused 526 (delta 526), pack-reused 466277[K
+Receiving objects: 100% (467230/467230), 741.16 MiB | 25.40 MiB/s   Receiving objects: 100% (467230/467230), 750.35 MiB | 25.37 MiB/s, done.
+Resolving deltas:   0% (0/324647)   Resolving deltas:   1% (3262/324647)   Resolving deltas:   2% (6497/324647)   Resolving deltas:   3% (9746/324647)   Resolving deltas:   4% (12988/324647)   Resolving deltas:   5% (16234/324647)   Resolving deltas:   6% (19481/324647)   Resolving deltas:   6% (21426/324647)   Resolving deltas:   7% (22726/324647)   Resolving deltas:   8% (25976/324647)   Resolving deltas:   9% (29220/324647)   Resolving deltas:  10% (32495/324647)   Resolving deltas:  11% (35755/324647)   Resolving deltas:  12% (38959/324647)   Resolving deltas:  13% (42206/324647)   Resolving deltas:  13% (44263/324647)   Resolving deltas:  14% (45463/324647)   Resolving deltas:  15% (48704/324647)   Resolving deltas:  16% (52066/324647)   Resolving deltas:  16% (52552/324647)   Resolving deltas:  17% (55194/324647)   Resolving deltas:  18% (58444/324647)   Resolving deltas:  19% (61689/324647)   Resolving deltas:  20% (64965/324647)   Resolving deltas:  21% (68176/324647)   Resolving deltas:  22% (71441/324647)   Resolving deltas:  23% (74858/324647)   Resolving deltas:  23% (75611/324647)   Resolving deltas:  24% (77919/324647)   Resolving deltas:  25% (81270/324647)   Resolving deltas:  26% (84435/324647)   Resolving deltas:  27% (87682/324647)   Resolving deltas:  28% (90903/324647)   Resolving deltas:  29% (94148/324647)   Resolving deltas:  30% (97395/324647)   Resolving deltas:  31% (100685/324647)   Resolving deltas:  32% (103971/324647)   Resolving deltas:  33% (107134/324647)   Resolving deltas:  34% (110382/324647)   Resolving deltas:  35% (113635/324647)   Resolving deltas:  36% (116995/324647)   Resolving deltas:  36% (117089/324647)   Resolving deltas:  37% (120178/324647)   Resolving deltas:  38% (123373/324647)   Resolving deltas:  39% (126932/324647)   Resolving deltas:  40% (129886/324647)   Resolving deltas:  41% (133429/324647)   Resolving deltas:  42% (136713/324647)   Resolving deltas:  43% (139645/324647)   Resolving deltas:  44% (142849/324647)   Resolving deltas:  45% (146182/324647)   Resolving deltas:  46% (149353/324647)   Resolving deltas:  47% (152589/324647)   Resolving deltas:  48% (155851/324647)   Resolving deltas:  49% (159659/324647)   Resolving deltas:  49% (159828/324647)   Resolving deltas:  50% (162368/324647)   Resolving deltas:  51% (165570/324647)   Resolving deltas:  52% (168831/324647)   Resolving deltas:  53% (172064/324647)   Resolving deltas:  54% (175311/324647)   Resolving deltas:  55% (178607/324647)   Resolving deltas:  56% (181823/324647)   Resolving deltas:  57% (185059/324647)   Resolving deltas:  58% (188301/324647)   Resolving deltas:  59% (191623/324647)   Resolving deltas:  60% (194792/324647)   Resolving deltas:  61% (198037/324647)   Resolving deltas:  62% (202059/324647)   Resolving deltas:  63% (204537/324647)   Resolving deltas:  64% (208884/324647)   Resolving deltas:  64% (209669/324647)   Resolving deltas:  65% (211072/324647)   Resolving deltas:  66% (214481/324647)   Resolving deltas:  67% (217516/324647)   Resolving deltas:  68% (220913/324647)   Resolving deltas:  69% (224121/324647)   Resolving deltas:  70% (227255/324647)   Resolving deltas:  71% (231080/324647)   Resolving deltas:  72% (233755/324647)   Resolving deltas:  73% (237013/324647)   Resolving deltas:  74% (240386/324647)   Resolving deltas:  75% (243500/324647)   Resolving deltas:  76% (246738/324647)   Resolving deltas:  77% (249995/324647)   Resolving deltas:  78% (253257/324647)   Resolving deltas:  79% (256502/324647)   Resolving deltas:  80% (259828/324647)   Resolving deltas:  81% (262973/324647)   Resolving deltas:  82% (266251/324647)   Resolving deltas:  83% (269470/324647)   Resolving deltas:  84% (272723/324647)   Resolving deltas:  85% (276023/324647)   Resolving deltas:  86% (279199/324647)   Resolving deltas:  86% (280578/324647)   Resolving deltas:  87% (282500/324647)   Resolving deltas:  88% (285808/324647)   Resolving deltas:  89% (288937/324647)   Resolving deltas:  90% (292218/324647)   Resolving deltas:  91% (295434/324647)   Resolving deltas:  92% (298686/324647)   Resolving deltas:  92% (300573/324647)   Resolving deltas:  93% (301924/324647)   Resolving deltas:  93% (305111/324647)   Resolving deltas:  94% (305169/324647)   Resolving deltas:  95% (308417/324647)   Resolving deltas:  96% (311662/324647)   Resolving deltas:  96% (314549/324647)   Resolving deltas:  97% (314917/324647)   Resolving deltas:  98% (318155/324647)   Resolving deltas:  99% (321416/324647)   Resolving deltas: 100% (324647/324647)   Resolving deltas: 100% (324647/324647), done.
++ cd edx-platform
+++ sed 's/\.git//g'
+++ grep -o 'github.com.*'
+++ git config --get remote.origin.url
++ actualRemote=github.com/microsoft/edx-platform
+++ echo https://github.com/microsoft/edx-platform.git
+++ wc -l
+++ grep github.com/microsoft/edx-platform
++ count=1
++ [[ 1 -eq 0 ]]
++ git fetch
+++ git tag
+++ grep oxa_v2.1.1
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f 6dbfd19
+Note: checking out '6dbfd19'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 6dbfd19b97... Merge pull request #21 from Microsoft/site_enrollment_mani
+++ git rev-parse HEAD
+++ grep -i 6dbfd19
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.1 6dbfd19 -m 'minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ grep oxa_v2.1.1
+++ prefix='tag: '
+++ set +e
+++ wc -l
++++ sed -e 's/^/  /'
++++ git tag -l --points-at HEAD
+++ tagInfo='  oxa_v2.1.0
+  oxa_v2.1.1'
+++ set -e
+++ '[' -z '  oxa_v2.1.0
+  oxa_v2.1.1' ']'
+++ echo '  oxa_v2.1.0
+  oxa_v2.1.1'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19' edx-platform https://github.com/microsoft/edx-platform.git
++ report=
++ '[' -z https://github.com/microsoft/edx-platform.git ']'
++ report='SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git'
++ echo 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git'
+SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git
++ finalReport='\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git'
++ git push --tags
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 222 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/microsoft/edx-platform.git
+ * [new tag]               oxa_v2.1.1 -> oxa_v2.1.1
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ tr , ' '
+++ tr ' ' _
+++ echo 'edx-theme,https://github.com/microsoft/edx-theme.git,oxa/master.fic,feefa37eab798aab053a9b7c0f809fec23913660,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ subFolder=edx-theme
++ remoteUrl=https://github.com/microsoft/edx-theme.git
++ gitBranch=oxa/master.fic
++ hashValue=feefa37eab798aab053a9b7c0f809fec23913660
++ newGitTag=oxa_v2.1.1
+++ echo 'minor_prod_deployment_on_2017-04-24._Email_content_and_styling._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -d edx-theme ']'
++ git clone https://github.com/microsoft/edx-theme.git edx-theme
+Cloning into 'edx-theme'...
+remote: Counting objects: 2808, done.[K
+Receiving objects:   0% (1/2808)   Receiving objects:   1% (29/2808)   Receiving objects:   2% (57/2808)   Receiving objects:   3% (85/2808)   Receiving objects:   4% (113/2808)   Receiving objects:   5% (141/2808)   Receiving objects:   6% (169/2808)   Receiving objects:   7% (197/2808)   Receiving objects:   8% (225/2808)   Receiving objects:   9% (253/2808)   Receiving objects:  10% (281/2808)   Receiving objects:  11% (309/2808)   Receiving objects:  12% (337/2808)   Receiving objects:  13% (366/2808)   Receiving objects:  14% (394/2808)   Receiving objects:  15% (422/2808)   Receiving objects:  16% (450/2808)   Receiving objects:  17% (478/2808)   Receiving objects:  18% (506/2808)   Receiving objects:  19% (534/2808)   Receiving objects:  20% (562/2808)   Receiving objects:  21% (590/2808)   Receiving objects:  22% (618/2808)   Receiving objects:  23% (646/2808)   Receiving objects:  24% (674/2808)   Receiving objects:  25% (702/2808)   Receiving objects:  26% (731/2808)   Receiving objects:  27% (759/2808)   Receiving objects:  28% (787/2808)   Receiving objects:  29% (815/2808)   Receiving objects:  30% (843/2808)   Receiving objects:  31% (871/2808)   Receiving objects:  32% (899/2808)   Receiving objects:  33% (927/2808)   Receiving objects:  34% (955/2808)   Receiving objects:  35% (983/2808)   Receiving objects:  36% (1011/2808)   Receiving objects:  37% (1039/2808)   Receiving objects:  38% (1068/2808)   Receiving objects:  39% (1096/2808)   Receiving objects:  40% (1124/2808)   Receiving objects:  41% (1152/2808)   Receiving objects:  42% (1180/2808)   Receiving objects:  43% (1208/2808)   Receiving objects:  44% (1236/2808)   Receiving objects:  45% (1264/2808)   Receiving objects:  46% (1292/2808)   Receiving objects:  47% (1320/2808)   Receiving objects:  48% (1348/2808)   Receiving objects:  49% (1376/2808)   Receiving objects:  50% (1404/2808)   Receiving objects:  51% (1433/2808)   Receiving objects:  52% (1461/2808)   Receiving objects:  53% (1489/2808)   Receiving objects:  54% (1517/2808)   Receiving objects:  55% (1545/2808)   Receiving objects:  56% (1573/2808)   Receiving objects:  57% (1601/2808)   Receiving objects:  58% (1629/2808)   Receiving objects:  59% (1657/2808)   Receiving objects:  60% (1685/2808)   Receiving objects:  61% (1713/2808)   Receiving objects:  62% (1741/2808)   Receiving objects:  63% (1770/2808)   Receiving objects:  64% (1798/2808)   Receiving objects:  65% (1826/2808)   Receiving objects:  66% (1854/2808)   Receiving objects:  67% (1882/2808)   Receiving objects:  68% (1910/2808)   Receiving objects:  69% (1938/2808)   Receiving objects:  70% (1966/2808)   Receiving objects:  71% (1994/2808)   Receiving objects:  72% (2022/2808)   Receiving objects:  73% (2050/2808)   Receiving objects:  74% (2078/2808)   Receiving objects:  75% (2106/2808)   Receiving objects:  76% (2135/2808)   Receiving objects:  77% (2163/2808)   Receiving objects:  78% (2191/2808)   Receiving objects:  79% (2219/2808)   Receiving objects:  80% (2247/2808)   Receiving objects:  81% (2275/2808)   Receiving objects:  82% (2303/2808)   Receiving objects:  83% (2331/2808)   Receiving objects:  84% (2359/2808)   Receiving objects:  85% (2387/2808)   Receiving objects:  86% (2415/2808)   Receiving objects:  87% (2443/2808)   Receiving objects:  88% (2472/2808)   Receiving objects:  89% (2500/2808)   Receiving objects:  90% (2528/2808)   Receiving objects:  91% (2556/2808)   Receiving objects:  92% (2584/2808)   Receiving objects:  93% (2612/2808)   Receiving objects:  94% (2640/2808)   Receiving objects:  95% (2668/2808)   Receiving objects:  96% (2696/2808)   Receiving objects:  97% (2724/2808)   Receiving objects:  98% (2752/2808)   Receiving objects:  99% (2780/2808)   remote: Total 2808 (delta 0), reused 0 (delta 0), pack-reused 2807[K
+Receiving objects: 100% (2808/2808)   Receiving objects: 100% (2808/2808), 10.72 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/1338)   Resolving deltas:   1% (23/1338)   Resolving deltas:   2% (32/1338)   Resolving deltas:   3% (44/1338)   Resolving deltas:   4% (54/1338)   Resolving deltas:   5% (69/1338)   Resolving deltas:   6% (81/1338)   Resolving deltas:   7% (101/1338)   Resolving deltas:   8% (108/1338)   Resolving deltas:   9% (125/1338)   Resolving deltas:  10% (134/1338)   Resolving deltas:  21% (287/1338)   Resolving deltas:  22% (295/1338)   Resolving deltas:  23% (310/1338)   Resolving deltas:  24% (322/1338)   Resolving deltas:  25% (339/1338)   Resolving deltas:  26% (353/1338)   Resolving deltas:  27% (363/1338)   Resolving deltas:  28% (375/1338)   Resolving deltas:  29% (389/1338)   Resolving deltas:  33% (446/1338)   Resolving deltas:  34% (456/1338)   Resolving deltas:  35% (471/1338)   Resolving deltas:  37% (505/1338)   Resolving deltas:  44% (601/1338)   Resolving deltas:  45% (608/1338)   Resolving deltas:  46% (619/1338)   Resolving deltas:  47% (631/1338)   Resolving deltas:  48% (645/1338)   Resolving deltas:  49% (656/1338)   Resolving deltas:  50% (677/1338)   Resolving deltas:  51% (685/1338)   Resolving deltas:  52% (697/1338)   Resolving deltas:  53% (711/1338)   Resolving deltas:  55% (742/1338)   Resolving deltas:  56% (751/1338)   Resolving deltas:  57% (763/1338)   Resolving deltas:  59% (790/1338)   Resolving deltas:  60% (805/1338)   Resolving deltas:  61% (817/1338)   Resolving deltas:  63% (844/1338)   Resolving deltas:  64% (857/1338)   Resolving deltas:  65% (872/1338)   Resolving deltas:  67% (899/1338)   Resolving deltas:  68% (913/1338)   Resolving deltas:  69% (925/1338)   Resolving deltas:  70% (948/1338)   Resolving deltas:  74% (1000/1338)   Resolving deltas:  79% (1067/1338)   Resolving deltas:  80% (1073/1338)   Resolving deltas:  81% (1097/1338)   Resolving deltas:  82% (1099/1338)   Resolving deltas:  88% (1182/1338)   Resolving deltas:  89% (1194/1338)   Resolving deltas:  90% (1205/1338)   Resolving deltas:  92% (1241/1338)   Resolving deltas:  93% (1249/1338)   Resolving deltas:  95% (1274/1338)   Resolving deltas:  96% (1293/1338)   Resolving deltas:  97% (1300/1338)   Resolving deltas:  98% (1314/1338)   Resolving deltas:  99% (1327/1338)   Resolving deltas: 100% (1338/1338)   Resolving deltas: 100% (1338/1338), done.
++ cd edx-theme
+++ git config --get remote.origin.url
+++ grep -o 'github.com.*'
+++ sed 's/\.git//g'
++ actualRemote=github.com/microsoft/edx-theme
+++ echo https://github.com/microsoft/edx-theme.git
+++ wc -l
+++ grep github.com/microsoft/edx-theme
++ count=1
++ [[ 1 -eq 0 ]]
++ git fetch
+++ grep oxa_v2.1.1
+++ git tag
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f feefa37eab798aab053a9b7c0f809fec23913660
+Note: checking out 'feefa37eab798aab053a9b7c0f809fec23913660'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at feefa37... Merge pull request #72 from Microsoft/email_fix_mani
+++ grep -i feefa37eab798aab053a9b7c0f809fec23913660
+++ git rev-parse HEAD
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.1 feefa37eab798aab053a9b7c0f809fec23913660 -m 'minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
++++ sed -e 's/^/  /'
++++ git tag -l --points-at HEAD
+++ wc -l
+++ grep oxa_v2.1.1
+++ tagInfo='  oxa_v2.1.1'
+++ set -e
+++ '[' -z '  oxa_v2.1.1' ']'
+++ echo '  oxa_v2.1.1'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660' edx-theme https://github.com/microsoft/edx-theme.git
++ report=
++ '[' -z https://github.com/microsoft/edx-theme.git ']'
++ report='SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git'
++ echo 'SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git'
+SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git
++ finalReport='\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git'
++ git push --tags
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 221 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/microsoft/edx-theme.git
+ * [new tag]         oxa_v2.1.1 -> oxa_v2.1.1
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'oxa_kitchen_sink,https://github.com/Microsoft/oxa_kitchen_sink.git,master,0698a4e,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ tr , ' '
+++ tr ' ' _
++ subFolder=oxa_kitchen_sink
++ remoteUrl=https://github.com/Microsoft/oxa_kitchen_sink.git
++ gitBranch=master
++ hashValue=0698a4e
++ newGitTag=oxa_v2.1.1
+++ echo 'minor_prod_deployment_on_2017-04-24._Email_content_and_styling._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -d oxa_kitchen_sink ']'
++ git clone https://github.com/Microsoft/oxa_kitchen_sink.git oxa_kitchen_sink
+Cloning into 'oxa_kitchen_sink'...
+remote: Counting objects: 231, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+Receiving objects:   0% (1/231)   Receiving objects:   1% (3/231)   Receiving objects:   2% (5/231)   Receiving objects:   3% (7/231)   Receiving objects:   4% (10/231)   Receiving objects:   5% (12/231)   Receiving objects:   6% (14/231)   Receiving objects:   7% (17/231)   Receiving objects:   8% (19/231)   Receiving objects:   9% (21/231)   Receiving objects:  10% (24/231)   Receiving objects:  11% (26/231)   Receiving objects:  12% (28/231)   Receiving objects:  13% (31/231)   Receiving objects:  14% (33/231)   Receiving objects:  15% (35/231)   Receiving objects:  16% (37/231)   Receiving objects:  17% (40/231)   Receiving objects:  18% (42/231)   Receiving objects:  19% (44/231)   Receiving objects:  20% (47/231)   Receiving objects:  21% (49/231)   Receiving objects:  22% (51/231)   Receiving objects:  23% (54/231)   Receiving objects:  24% (56/231)   Receiving objects:  25% (58/231)   Receiving objects:  26% (61/231)   Receiving objects:  27% (63/231)   Receiving objects:  28% (65/231)   Receiving objects:  29% (67/231)   Receiving objects:  30% (70/231)   Receiving objects:  31% (72/231)   Receiving objects:  32% (74/231)   Receiving objects:  33% (77/231)   Receiving objects:  34% (79/231)   Receiving objects:  35% (81/231)   Receiving objects:  36% (84/231)   Receiving objects:  37% (86/231)   Receiving objects:  38% (88/231)   Receiving objects:  39% (91/231)   Receiving objects:  40% (93/231)   Receiving objects:  41% (95/231)   remote: Total 231 (delta 0), reused 0 (delta 0), pack-reused 229[K
+Receiving objects:  42% (98/231)   Receiving objects:  43% (100/231)   Receiving objects:  44% (102/231)   Receiving objects:  45% (104/231)   Receiving objects:  46% (107/231)   Receiving objects:  47% (109/231)   Receiving objects:  48% (111/231)   Receiving objects:  49% (114/231)   Receiving objects:  50% (116/231)   Receiving objects:  51% (118/231)   Receiving objects:  52% (121/231)   Receiving objects:  53% (123/231)   Receiving objects:  54% (125/231)   Receiving objects:  55% (128/231)   Receiving objects:  56% (130/231)   Receiving objects:  57% (132/231)   Receiving objects:  58% (134/231)   Receiving objects:  59% (137/231)   Receiving objects:  60% (139/231)   Receiving objects:  61% (141/231)   Receiving objects:  62% (144/231)   Receiving objects:  63% (146/231)   Receiving objects:  64% (148/231)   Receiving objects:  65% (151/231)   Receiving objects:  66% (153/231)   Receiving objects:  67% (155/231)   Receiving objects:  68% (158/231)   Receiving objects:  69% (160/231)   Receiving objects:  70% (162/231)   Receiving objects:  71% (165/231)   Receiving objects:  72% (167/231)   Receiving objects:  73% (169/231)   Receiving objects:  74% (171/231)   Receiving objects:  75% (174/231)   Receiving objects:  76% (176/231)   Receiving objects:  77% (178/231)   Receiving objects:  78% (181/231)   Receiving objects:  79% (183/231)   Receiving objects:  80% (185/231)   Receiving objects:  81% (188/231)   Receiving objects:  82% (190/231)   Receiving objects:  83% (192/231)   Receiving objects:  84% (195/231)   Receiving objects:  85% (197/231)   Receiving objects:  86% (199/231)   Receiving objects:  87% (201/231)   Receiving objects:  88% (204/231)   Receiving objects:  89% (206/231)   Receiving objects:  90% (208/231)   Receiving objects:  91% (211/231)   Receiving objects:  92% (213/231)   Receiving objects:  93% (215/231)   Receiving objects:  94% (218/231)   Receiving objects:  95% (220/231)   Receiving objects:  96% (222/231)   Receiving objects:  97% (225/231)   Receiving objects:  98% (227/231)   Receiving objects:  99% (229/231)   Receiving objects: 100% (231/231)   Receiving objects: 100% (231/231), 390.46 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/73)   Resolving deltas:   1% (1/73)   Resolving deltas:   9% (7/73)   Resolving deltas:  15% (11/73)   Resolving deltas:  20% (15/73)   Resolving deltas:  23% (17/73)   Resolving deltas:  24% (18/73)   Resolving deltas:  27% (20/73)   Resolving deltas:  28% (21/73)   Resolving deltas:  39% (29/73)   Resolving deltas:  42% (31/73)   Resolving deltas:  49% (36/73)   Resolving deltas:  50% (37/73)   Resolving deltas:  52% (38/73)   Resolving deltas:  53% (39/73)   Resolving deltas:  54% (40/73)   Resolving deltas:  56% (41/73)   Resolving deltas:  57% (42/73)   Resolving deltas:  58% (43/73)   Resolving deltas:  60% (44/73)   Resolving deltas:  64% (47/73)   Resolving deltas:  65% (48/73)   Resolving deltas:  71% (52/73)   Resolving deltas:  72% (53/73)   Resolving deltas:  73% (54/73)   Resolving deltas:  75% (55/73)   Resolving deltas:  79% (58/73)   Resolving deltas:  80% (59/73)   Resolving deltas: 100% (73/73)   Resolving deltas: 100% (73/73), done.
++ cd oxa_kitchen_sink
+++ git config --get remote.origin.url
+++ grep -o 'github.com.*'
+++ sed 's/\.git//g'
++ actualRemote=github.com/Microsoft/oxa_kitchen_sink
+++ echo https://github.com/Microsoft/oxa_kitchen_sink.git
+++ wc -l
+++ grep github.com/Microsoft/oxa_kitchen_sink
++ count=1
++ [[ 1 -eq 0 ]]
++ git fetch
+++ git tag
+++ grep oxa_v2.1.1
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout master
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
++ git pull
+Already up-to-date.
++ git checkout -f 0698a4e
+Note: checking out '0698a4e'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 0698a4e... Merge pull request #2 from Microsoft/apenddate
+++ git rev-parse HEAD
+++ grep -i 0698a4e
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.1 0698a4e -m 'minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
+++ grep oxa_v2.1.1
+++ wc -l
++++ git tag -l --points-at HEAD
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.0.0
+  oxa_v2.1.0
+  oxa_v2.1.1'
+++ set -e
+++ '[' -z '  oxa_v2.0.0
+  oxa_v2.1.0
+  oxa_v2.1.1' ']'
+++ echo '  oxa_v2.0.0
+  oxa_v2.1.0
+  oxa_v2.1.1'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e' oxa_kitchen_sink https://github.com/Microsoft/oxa_kitchen_sink.git
++ report=
++ '[' -z https://github.com/Microsoft/oxa_kitchen_sink.git ']'
++ report='SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git'
++ echo 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git'
+SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
++ finalReport='\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git'
++ git push --tags
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 222 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/oxa_kitchen_sink.git
+ * [new tag]         oxa_v2.1.1 -> oxa_v2.1.1
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ tr , ' '
+++ tr ' ' _
+++ echo 'oxa-tools,https://github.com/Microsoft/oxa-tools.git,oxa/master.fic,1b5b6b4,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ subFolder=oxa-tools
++ remoteUrl=https://github.com/Microsoft/oxa-tools.git
++ gitBranch=oxa/master.fic
++ hashValue=1b5b6b4
++ newGitTag=oxa_v2.1.1
+++ tr _ ' '
+++ echo 'minor_prod_deployment_on_2017-04-24._Email_content_and_styling._OpenedX_on_Azure_(oxa).'
++ tagMessage='minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -d oxa-tools ']'
++ git clone https://github.com/Microsoft/oxa-tools.git oxa-tools
+Cloning into 'oxa-tools'...
+remote: Counting objects: 4069, done.[K
+remote: Compressing objects:   1% (1/66)   [Kremote: Compressing objects:   3% (2/66)   [Kremote: Compressing objects:   4% (3/66)   [Kremote: Compressing objects:   6% (4/66)   [Kremote: Compressing objects:   7% (5/66)   [Kremote: Compressing objects:   9% (6/66)   [Kremote: Compressing objects:  10% (7/66)   [Kremote: Compressing objects:  12% (8/66)   [Kremote: Compressing objects:  13% (9/66)   [Kremote: Compressing objects:  15% (10/66)   [Kremote: Compressing objects:  16% (11/66)   [Kremote: Compressing objects:  18% (12/66)   [Kremote: Compressing objects:  19% (13/66)   [Kremote: Compressing objects:  21% (14/66)   [Kremote: Compressing objects:  22% (15/66)   [Kremote: Compressing objects:  24% (16/66)   [Kremote: Compressing objects:  25% (17/66)   [Kremote: Compressing objects:  27% (18/66)   [Kremote: Compressing objects:  28% (19/66)   [Kremote: Compressing objects:  30% (20/66)   [Kremote: Compressing objects:  31% (21/66)   [Kremote: Compressing objects:  33% (22/66)   [Kremote: Compressing objects:  34% (23/66)   [Kremote: Compressing objects:  36% (24/66)   [Kremote: Compressing objects:  37% (25/66)   [Kremote: Compressing objects:  39% (26/66)   [Kremote: Compressing objects:  40% (27/66)   [Kremote: Compressing objects:  42% (28/66)   [Kremote: Compressing objects:  43% (29/66)   [Kremote: Compressing objects:  45% (30/66)   [Kremote: Compressing objects:  46% (31/66)   [Kremote: Compressing objects:  48% (32/66)   [Kremote: Compressing objects:  50% (33/66)   [Kremote: Compressing objects:  51% (34/66)   [Kremote: Compressing objects:  53% (35/66)   [Kremote: Compressing objects:  54% (36/66)   [Kremote: Compressing objects:  56% (37/66)   [Kremote: Compressing objects:  57% (38/66)   [Kremote: Compressing objects:  59% (39/66)   [Kremote: Compressing objects:  60% (40/66)   [Kremote: Compressing objects:  62% (41/66)   [Kremote: Compressing objects:  63% (42/66)   [Kremote: Compressing objects:  65% (43/66)   [Kremote: Compressing objects:  66% (44/66)   [Kremote: Compressing objects:  68% (45/66)   [Kremote: Compressing objects:  69% (46/66)   [Kremote: Compressing objects:  71% (47/66)   [Kremote: Compressing objects:  72% (48/66)   [Kremote: Compressing objects:  74% (49/66)   [Kremote: Compressing objects:  75% (50/66)   [Kremote: Compressing objects:  77% (51/66)   [Kremote: Compressing objects:  78% (52/66)   [Kremote: Compressing objects:  80% (53/66)   [Kremote: Compressing objects:  81% (54/66)   [Kremote: Compressing objects:  83% (55/66)   [Kremote: Compressing objects:  84% (56/66)   [Kremote: Compressing objects:  86% (57/66)   [Kremote: Compressing objects:  87% (58/66)   [Kremote: Compressing objects:  89% (59/66)   [Kremote: Compressing objects:  90% (60/66)   [Kremote: Compressing objects:  92% (61/66)   [Kremote: Compressing objects:  93% (62/66)   [Kremote: Compressing objects:  95% (63/66)   [Kremote: Compressing objects:  96% (64/66)   [Kremote: Compressing objects:  98% (65/66)   [Kremote: Compressing objects: 100% (66/66)   [Kremote: Compressing objects: 100% (66/66), done.[K
+Receiving objects:   0% (1/4069)   Receiving objects:   1% (41/4069)   Receiving objects:   2% (82/4069)   Receiving objects:   3% (123/4069)   Receiving objects:   4% (163/4069)   Receiving objects:   5% (204/4069)   Receiving objects:   6% (245/4069)   Receiving objects:   7% (285/4069)   Receiving objects:   8% (326/4069)   Receiving objects:   9% (367/4069)   Receiving objects:  10% (407/4069)   Receiving objects:  11% (448/4069)   Receiving objects:  12% (489/4069)   Receiving objects:  13% (529/4069)   Receiving objects:  14% (570/4069)   Receiving objects:  15% (611/4069)   Receiving objects:  16% (652/4069)   Receiving objects:  17% (692/4069)   Receiving objects:  18% (733/4069)   Receiving objects:  19% (774/4069)   Receiving objects:  20% (814/4069)   Receiving objects:  21% (855/4069)   Receiving objects:  22% (896/4069)   Receiving objects:  23% (936/4069)   Receiving objects:  24% (977/4069)   Receiving objects:  25% (1018/4069)   Receiving objects:  26% (1058/4069)   Receiving objects:  27% (1099/4069)   Receiving objects:  28% (1140/4069)   Receiving objects:  29% (1181/4069)   Receiving objects:  30% (1221/4069)   Receiving objects:  31% (1262/4069)   Receiving objects:  32% (1303/4069)   Receiving objects:  33% (1343/4069)   Receiving objects:  34% (1384/4069)   Receiving objects:  35% (1425/4069)   Receiving objects:  36% (1465/4069)   Receiving objects:  37% (1506/4069)   Receiving objects:  38% (1547/4069)   Receiving objects:  39% (1587/4069)   Receiving objects:  40% (1628/4069)   Receiving objects:  41% (1669/4069)   Receiving objects:  42% (1709/4069)   Receiving objects:  43% (1750/4069)   Receiving objects:  44% (1791/4069)   Receiving objects:  45% (1832/4069)   Receiving objects:  46% (1872/4069)   Receiving objects:  47% (1913/4069)   Receiving objects:  48% (1954/4069)   Receiving objects:  49% (1994/4069)   Receiving objects:  50% (2035/4069)   Receiving objects:  51% (2076/4069)   Receiving objects:  52% (2116/4069)   Receiving objects:  53% (2157/4069)   Receiving objects:  54% (2198/4069)   Receiving objects:  55% (2238/4069)   Receiving objects:  56% (2279/4069)   Receiving objects:  57% (2320/4069)   Receiving objects:  58% (2361/4069)   Receiving objects:  59% (2401/4069)   Receiving objects:  60% (2442/4069)   Receiving objects:  61% (2483/4069)   Receiving objects:  62% (2523/4069)   Receiving objects:  63% (2564/4069)   Receiving objects:  64% (2605/4069)   Receiving objects:  65% (2645/4069)   Receiving objects:  66% (2686/4069)   Receiving objects:  67% (2727/4069)   Receiving objects:  68% (2767/4069)   Receiving objects:  69% (2808/4069)   Receiving objects:  70% (2849/4069)   Receiving objects:  71% (2889/4069)   Receiving objects:  72% (2930/4069)   Receiving objects:  73% (2971/4069)   Receiving objects:  74% (3012/4069)   Receiving objects:  75% (3052/4069)   Receiving objects:  76% (3093/4069)   Receiving objects:  77% (3134/4069)   Receiving objects:  78% (3174/4069)   Receiving objects:  79% (3215/4069)   Receiving objects:  80% (3256/4069)   Receiving objects:  81% (3296/4069)   Receiving objects:  82% (3337/4069)   Receiving objects:  83% (3378/4069)   Receiving objects:  84% (3418/4069)   Receiving objects:  85% (3459/4069)   Receiving objects:  86% (3500/4069)   Receiving objects:  87% (3541/4069)   Receiving objects:  88% (3581/4069)   Receiving objects:  89% (3622/4069)   Receiving objects:  90% (3663/4069)   Receiving objects:  91% (3703/4069)   Receiving objects:  92% (3744/4069)   Receiving objects:  93% (3785/4069)   Receiving objects:  94% (3825/4069)   Receiving objects:  95% (3866/4069)   Receiving objects:  96% (3907/4069)   Receiving objects:  97% (3947/4069)   Receiving objects:  98% (3988/4069)   Receiving objects:  99% (4029/4069)   remote: Total 4069 (delta 33), reused 0 (delta 0), pack-reused 4003[K
+Receiving objects: 100% (4069/4069)   Receiving objects: 100% (4069/4069), 869.95 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/2505)   Resolving deltas:   1% (26/2505)   Resolving deltas:   4% (111/2505)   Resolving deltas:   5% (137/2505)   Resolving deltas:   6% (163/2505)   Resolving deltas:   7% (178/2505)   Resolving deltas:   8% (203/2505)   Resolving deltas:   9% (231/2505)   Resolving deltas:  10% (253/2505)   Resolving deltas:  11% (276/2505)   Resolving deltas:  12% (301/2505)   Resolving deltas:  13% (347/2505)   Resolving deltas:  14% (354/2505)   Resolving deltas:  16% (410/2505)   Resolving deltas:  17% (427/2505)   Resolving deltas:  18% (454/2505)   Resolving deltas:  19% (488/2505)   Resolving deltas:  25% (637/2505)   Resolving deltas:  31% (780/2505)   Resolving deltas:  32% (819/2505)   Resolving deltas:  33% (848/2505)   Resolving deltas:  35% (898/2505)   Resolving deltas:  36% (916/2505)   Resolving deltas:  37% (950/2505)   Resolving deltas:  38% (961/2505)   Resolving deltas:  40% (1027/2505)   Resolving deltas:  45% (1148/2505)   Resolving deltas:  46% (1155/2505)   Resolving deltas:  48% (1212/2505)   Resolving deltas:  51% (1293/2505)   Resolving deltas:  52% (1304/2505)   Resolving deltas:  53% (1335/2505)   Resolving deltas:  56% (1406/2505)   Resolving deltas:  61% (1535/2505)   Resolving deltas:  63% (1593/2505)   Resolving deltas:  64% (1613/2505)   Resolving deltas:  65% (1647/2505)   Resolving deltas:  67% (1682/2505)   Resolving deltas:  68% (1720/2505)   Resolving deltas:  69% (1748/2505)   Resolving deltas:  70% (1778/2505)   Resolving deltas:  71% (1780/2505)   Resolving deltas:  72% (1812/2505)   Resolving deltas:  73% (1851/2505)   Resolving deltas:  75% (1879/2505)   Resolving deltas:  76% (1904/2505)   Resolving deltas:  77% (1932/2505)   Resolving deltas:  78% (1955/2505)   Resolving deltas:  79% (1984/2505)   Resolving deltas:  80% (2016/2505)   Resolving deltas:  81% (2032/2505)   Resolving deltas:  82% (2066/2505)   Resolving deltas:  83% (2086/2505)   Resolving deltas:  85% (2130/2505)   Resolving deltas:  86% (2156/2505)   Resolving deltas:  87% (2184/2505)   Resolving deltas:  89% (2248/2505)   Resolving deltas:  90% (2267/2505)   Resolving deltas:  91% (2284/2505)   Resolving deltas:  92% (2326/2505)   Resolving deltas:  93% (2342/2505)   Resolving deltas:  94% (2366/2505)   Resolving deltas:  95% (2381/2505)   Resolving deltas:  96% (2412/2505)   Resolving deltas:  97% (2431/2505)   Resolving deltas:  98% (2456/2505)   Resolving deltas:  99% (2484/2505)   Resolving deltas: 100% (2505/2505)   Resolving deltas: 100% (2505/2505), done.
++ cd oxa-tools
+++ git config --get remote.origin.url
+++ grep -o 'github.com.*'
+++ sed 's/\.git//g'
++ actualRemote=github.com/Microsoft/oxa-tools
+++ echo https://github.com/Microsoft/oxa-tools.git
+++ wc -l
+++ grep github.com/Microsoft/oxa-tools
++ count=1
++ [[ 1 -eq 0 ]]
++ git fetch
+++ git tag
+++ wc -l
+++ grep oxa_v2.1.1
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Already up-to-date.
++ git checkout -f 1b5b6b4
+Note: checking out '1b5b6b4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 1b5b6b4... Merge pull request #119 from Microsoft/oxa/master.fic.eltonc.clidefault
+++ git rev-parse HEAD
+++ wc -l
+++ grep -i 1b5b6b4
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.1 1b5b6b4 -m 'minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
+++ grep oxa_v2.1.1
+++ wc -l
++++ sed -e 's/^/  /'
++++ git tag -l --points-at HEAD
+++ tagInfo='  oxa_v2.1.0
+  oxa_v2.1.1'
+++ set -e
+++ '[' -z '  oxa_v2.1.0
+  oxa_v2.1.1' ']'
+++ echo '  oxa_v2.1.0
+  oxa_v2.1.1'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4' oxa-tools https://github.com/Microsoft/oxa-tools.git
++ report=
++ '[' -z https://github.com/Microsoft/oxa-tools.git ']'
++ report='SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git'
++ echo 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git'
+SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git
++ finalReport='\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git'
++ git push --tags
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 222 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/oxa-tools.git
+ * [new tag]         oxa_v2.1.1 -> oxa_v2.1.1
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ echo 'oxa-tools-config,https://github.com/microsoft/oxa-tools-config.git,oxa/master.fic,c2a5717d8cbfa155c1abd5219962f956f604a4d5,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ tr ' ' _
+++ tr , ' '
++ subFolder=oxa-tools-config
++ remoteUrl=https://github.com/microsoft/oxa-tools-config.git
++ gitBranch=oxa/master.fic
++ hashValue=c2a5717d8cbfa155c1abd5219962f956f604a4d5
++ newGitTag=oxa_v2.1.1
+++ echo 'minor_prod_deployment_on_2017-04-24._Email_content_and_styling._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -d oxa-tools-config ']'
++ git clone https://github.com/microsoft/oxa-tools-config.git oxa-tools-config
+Cloning into 'oxa-tools-config'...
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+remote: Counting objects: 2601, done.[K
+remote: Compressing objects:  20% (1/5)   [Kremote: Compressing objects:  40% (2/5)   [Kremote: Compressing objects:  60% (3/5)   [Kremote: Compressing objects:  80% (4/5)   [Kremote: Compressing objects: 100% (5/5)   [Kremote: Compressing objects: 100% (5/5), done.[K
+Receiving objects:   0% (1/2601)   Receiving objects:   1% (27/2601)   Receiving objects:   2% (53/2601)   Receiving objects:   3% (79/2601)   Receiving objects:   4% (105/2601)   Receiving objects:   5% (131/2601)   Receiving objects:   6% (157/2601)   Receiving objects:   7% (183/2601)   Receiving objects:   8% (209/2601)   Receiving objects:   9% (235/2601)   Receiving objects:  10% (261/2601)   Receiving objects:  11% (287/2601)   Receiving objects:  12% (313/2601)   Receiving objects:  13% (339/2601)   Receiving objects:  14% (365/2601)   Receiving objects:  15% (391/2601), 7.46 MiB | 14.88 MiB/s   Receiving objects:  16% (417/2601), 7.46 MiB | 14.88 MiB/s   Receiving objects:  17% (443/2601), 7.46 MiB | 14.88 MiB/s   Receiving objects:  18% (469/2601), 7.46 MiB | 14.88 MiB/s   Receiving objects:  19% (495/2601), 7.46 MiB | 14.88 MiB/s   Receiving objects:  19% (507/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  20% (521/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  21% (547/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  22% (573/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  23% (599/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  24% (625/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  25% (651/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  26% (677/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  27% (703/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  28% (729/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  29% (755/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  30% (781/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  31% (807/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  32% (833/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  33% (859/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  34% (885/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  35% (911/2601), 16.39 MiB | 16.28 MiB/s   Receiving objects:  36% (937/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  37% (963/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  38% (989/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  39% (1015/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  40% (1041/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  41% (1067/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  42% (1093/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  43% (1119/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  44% (1145/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  45% (1171/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  46% (1197/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  47% (1223/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  48% (1249/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  49% (1275/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  50% (1301/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  51% (1327/2601), 24.57 MiB | 16.30 MiB/s   Receiving objects:  51% (1344/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  52% (1353/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  53% (1379/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  54% (1405/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  55% (1431/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  56% (1457/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  57% (1483/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  58% (1509/2601), 35.64 MiB | 17.75 MiB/s   Receiving objects:  59% (1535/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  60% (1561/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  61% (1587/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  62% (1613/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  63% (1639/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  64% (1665/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  65% (1691/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  66% (1717/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  67% (1743/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  68% (1769/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  69% (1795/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  70% (1821/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  71% (1847/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  72% (1873/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  73% (1899/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  74% (1925/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  75% (1951/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  76% (1977/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  77% (2003/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  78% (2029/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  79% (2055/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  80% (2081/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  81% (2107/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  82% (2133/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  83% (2159/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  84% (2185/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  85% (2211/2601), 48.52 MiB | 19.35 MiB/s   remote: Total 2601 (delta 0), reused 0 (delta 0), pack-reused 2596[K
+Receiving objects:  86% (2237/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  87% (2263/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  88% (2289/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  89% (2315/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  90% (2341/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  91% (2367/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  92% (2393/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  93% (2419/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  94% (2445/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  95% (2471/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  96% (2497/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  97% (2523/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  98% (2549/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects:  99% (2575/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects: 100% (2601/2601), 48.52 MiB | 19.35 MiB/s   Receiving objects: 100% (2601/2601), 56.01 MiB | 19.35 MiB/s, done.
+Resolving deltas:   0% (0/1320)   Resolving deltas:  14% (188/1320)   Resolving deltas:  15% (201/1320)   Resolving deltas:  16% (213/1320)   Resolving deltas:  17% (225/1320)   Resolving deltas:  18% (238/1320)   Resolving deltas:  19% (252/1320)   Resolving deltas:  20% (268/1320)   Resolving deltas:  21% (289/1320)   Resolving deltas:  22% (293/1320)   Resolving deltas:  25% (332/1320)   Resolving deltas:  26% (345/1320)   Resolving deltas:  28% (371/1320)   Resolving deltas:  34% (450/1320)   Resolving deltas:  35% (475/1320)   Resolving deltas:  36% (481/1320)   Resolving deltas:  37% (490/1320)   Resolving deltas:  38% (507/1320)   Resolving deltas:  39% (523/1320)   Resolving deltas:  42% (560/1320)   Resolving deltas:  43% (572/1320)   Resolving deltas:  44% (582/1320)   Resolving deltas:  45% (594/1320)   Resolving deltas:  46% (619/1320)   Resolving deltas:  47% (628/1320)   Resolving deltas:  48% (634/1320)   Resolving deltas:  49% (647/1320)   Resolving deltas:  50% (663/1320)   Resolving deltas:  51% (683/1320)   Resolving deltas:  52% (687/1320)   Resolving deltas:  53% (708/1320)   Resolving deltas:  54% (716/1320)   Resolving deltas:  55% (728/1320)   Resolving deltas:  57% (753/1320)   Resolving deltas:  58% (770/1320)   Resolving deltas:  59% (785/1320)   Resolving deltas:  60% (803/1320)   Resolving deltas:  62% (821/1320)   Resolving deltas:  64% (853/1320)   Resolving deltas:  65% (858/1320)   Resolving deltas:  66% (873/1320)   Resolving deltas:  67% (886/1320)   Resolving deltas:  68% (899/1320)   Resolving deltas:  69% (911/1320)   Resolving deltas:  73% (976/1320)   Resolving deltas:  74% (977/1320)   Resolving deltas:  84% (1111/1320)   Resolving deltas:  85% (1131/1320)   Resolving deltas:  86% (1142/1320)   Resolving deltas:  87% (1159/1320)   Resolving deltas:  88% (1163/1320)   Resolving deltas:  90% (1197/1320)   Resolving deltas:  93% (1231/1320)   Resolving deltas:  95% (1255/1320)   Resolving deltas:  96% (1273/1320)   Resolving deltas:  97% (1292/1320)   Resolving deltas:  98% (1294/1320)   Resolving deltas:  99% (1309/1320)   Resolving deltas: 100% (1320/1320)   Resolving deltas: 100% (1320/1320), done.
+Checking out files:  24% (969/3957)   Checking out files:  25% (990/3957)   Checking out files:  26% (1029/3957)   Checking out files:  27% (1069/3957)   Checking out files:  28% (1108/3957)   Checking out files:  29% (1148/3957)   Checking out files:  30% (1188/3957)   Checking out files:  31% (1227/3957)   Checking out files:  32% (1267/3957)   Checking out files:  33% (1306/3957)   Checking out files:  34% (1346/3957)   Checking out files:  35% (1385/3957)   Checking out files:  36% (1425/3957)   Checking out files:  37% (1465/3957)   Checking out files:  38% (1504/3957)   Checking out files:  39% (1544/3957)   Checking out files:  40% (1583/3957)   Checking out files:  40% (1592/3957)   Checking out files:  41% (1623/3957)   Checking out files:  42% (1662/3957)   Checking out files:  43% (1702/3957)   Checking out files:  44% (1742/3957)   Checking out files:  45% (1781/3957)   Checking out files:  46% (1821/3957)   Checking out files:  47% (1860/3957)   Checking out files:  48% (1900/3957)   Checking out files:  49% (1939/3957)   Checking out files:  50% (1979/3957)   Checking out files:  51% (2019/3957)   Checking out files:  52% (2058/3957)   Checking out files:  53% (2098/3957)   Checking out files:  54% (2137/3957)   Checking out files:  55% (2177/3957)   Checking out files:  56% (2216/3957)   Checking out files:  57% (2256/3957)   Checking out files:  58% (2296/3957)   Checking out files:  59% (2335/3957)   Checking out files:  60% (2375/3957)   Checking out files:  61% (2414/3957)   Checking out files:  62% (2454/3957)   Checking out files:  63% (2493/3957)   Checking out files:  64% (2533/3957)   Checking out files:  65% (2573/3957)   Checking out files:  66% (2612/3957)   Checking out files:  67% (2652/3957)   Checking out files:  68% (2691/3957)   Checking out files:  69% (2731/3957)   Checking out files:  70% (2770/3957)   Checking out files:  71% (2810/3957)   Checking out files:  71% (2830/3957)   Checking out files:  72% (2850/3957)   Checking out files:  73% (2889/3957)   Checking out files:  74% (2929/3957)   Checking out files:  75% (2968/3957)   Checking out files:  76% (3008/3957)   Checking out files:  77% (3047/3957)   Checking out files:  78% (3087/3957)   Checking out files:  79% (3127/3957)   Checking out files:  80% (3166/3957)   Checking out files:  81% (3206/3957)   Checking out files:  82% (3245/3957)   Checking out files:  83% (3285/3957)   Checking out files:  84% (3324/3957)   Checking out files:  85% (3364/3957)   Checking out files:  86% (3404/3957)   Checking out files:  87% (3443/3957)   Checking out files:  88% (3483/3957)   Checking out files:  89% (3522/3957)   Checking out files:  90% (3562/3957)   Checking out files:  91% (3601/3957)   Checking out files:  92% (3641/3957)   Checking out files:  93% (3681/3957)   Checking out files:  94% (3720/3957)   Checking out files:  95% (3760/3957)   Checking out files:  95% (3772/3957)   Checking out files:  96% (3799/3957)   Checking out files:  97% (3839/3957)   Checking out files:  98% (3878/3957)   Checking out files:  99% (3918/3957)   Checking out files: 100% (3957/3957)   Checking out files: 100% (3957/3957), done.
++ cd oxa-tools-config
+++ git config --get remote.origin.url
+++ sed 's/\.git//g'
+++ grep -o 'github.com.*'
++ actualRemote=github.com/microsoft/oxa-tools-config
+++ wc -l
+++ grep github.com/microsoft/oxa-tools-config
+++ echo https://github.com/microsoft/oxa-tools-config.git
++ count=1
++ [[ 1 -eq 0 ]]
++ git fetch
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+++ git tag
+++ grep oxa_v2.1.1
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout oxa/master.fic
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
++ git pull
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Already up-to-date.
++ git checkout -f c2a5717d8cbfa155c1abd5219962f956f604a4d5
+Note: checking out 'c2a5717d8cbfa155c1abd5219962f956f604a4d5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at c2a5717... Merge pull request #56 from Microsoft/oxa/master.fic.eltonc.configupdates
+++ git rev-parse HEAD
+++ grep -i c2a5717d8cbfa155c1abd5219962f956f604a4d5
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.1 c2a5717d8cbfa155c1abd5219962f956f604a4d5 -m 'minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
+++ grep oxa_v2.1.1
++++ git tag -l --points-at HEAD
+++ wc -l
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.1.0
+  oxa_v2.1.1'
+++ set -e
+++ '[' -z '  oxa_v2.1.0
+  oxa_v2.1.1' ']'
+++ echo '  oxa_v2.1.0
+  oxa_v2.1.1'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5' oxa-tools-config https://github.com/microsoft/oxa-tools-config.git
++ report=
++ '[' -z https://github.com/microsoft/oxa-tools-config.git ']'
++ report='SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git'
++ echo 'SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git'
+SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git
++ finalReport='\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git'
++ git push --tags
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 222 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/microsoft/oxa-tools-config.git
+ * [new tag]         oxa_v2.1.1 -> oxa_v2.1.1
++ read entry
++ inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+++ tr , ' '
+++ tr ' ' _
+++ echo 'xblock-azure-media-services,https://github.com/Microsoft/xblock-azure-media-services.git,master,7df83f1,oxa_v2.1.1,minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ subFolder=xblock-azure-media-services
++ remoteUrl=https://github.com/Microsoft/xblock-azure-media-services.git
++ gitBranch=master
++ hashValue=7df83f1
++ newGitTag=oxa_v2.1.1
+++ echo 'minor_prod_deployment_on_2017-04-24._Email_content_and_styling._OpenedX_on_Azure_(oxa).'
+++ tr _ ' '
++ tagMessage='minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
++ cd /home/localstepdo/tags/oxa_v2.1.1
++ '[' '!' -d xblock-azure-media-services ']'
++ git clone https://github.com/Microsoft/xblock-azure-media-services.git xblock-azure-media-services
+Cloning into 'xblock-azure-media-services'...
+remote: Counting objects: 754, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+Receiving objects:   0% (1/754)   Receiving objects:   1% (8/754)   Receiving objects:   2% (16/754)   Receiving objects:   3% (23/754)   Receiving objects:   4% (31/754)   Receiving objects:   5% (38/754)   Receiving objects:   6% (46/754)   Receiving objects:   7% (53/754)   Receiving objects:   8% (61/754)   Receiving objects:   9% (68/754)   Receiving objects:  10% (76/754)   Receiving objects:  11% (83/754)   Receiving objects:  12% (91/754)   Receiving objects:  13% (99/754)   Receiving objects:  14% (106/754)   Receiving objects:  15% (114/754)   Receiving objects:  16% (121/754)   Receiving objects:  17% (129/754)   Receiving objects:  18% (136/754)   Receiving objects:  19% (144/754)   Receiving objects:  20% (151/754)   Receiving objects:  21% (159/754)   Receiving objects:  22% (166/754)   Receiving objects:  23% (174/754)   Receiving objects:  24% (181/754)   Receiving objects:  25% (189/754)   Receiving objects:  26% (197/754)   Receiving objects:  27% (204/754)   Receiving objects:  28% (212/754)   Receiving objects:  29% (219/754)   Receiving objects:  30% (227/754)   Receiving objects:  31% (234/754)   Receiving objects:  32% (242/754)   Receiving objects:  33% (249/754)   Receiving objects:  34% (257/754)   Receiving objects:  35% (264/754)   Receiving objects:  36% (272/754)   Receiving objects:  37% (279/754)   Receiving objects:  38% (287/754)   Receiving objects:  39% (295/754)   Receiving objects:  40% (302/754)   remote: Total 754 (delta 0), reused 0 (delta 0), pack-reused 752[K
+Receiving objects:  41% (310/754)   Receiving objects:  42% (317/754)   Receiving objects:  43% (325/754)   Receiving objects:  44% (332/754)   Receiving objects:  45% (340/754)   Receiving objects:  46% (347/754)   Receiving objects:  47% (355/754)   Receiving objects:  48% (362/754)   Receiving objects:  49% (370/754)   Receiving objects:  50% (377/754)   Receiving objects:  51% (385/754)   Receiving objects:  52% (393/754)   Receiving objects:  53% (400/754)   Receiving objects:  54% (408/754)   Receiving objects:  55% (415/754)   Receiving objects:  56% (423/754)   Receiving objects:  57% (430/754)   Receiving objects:  58% (438/754)   Receiving objects:  59% (445/754)   Receiving objects:  60% (453/754)   Receiving objects:  61% (460/754)   Receiving objects:  62% (468/754)   Receiving objects:  63% (476/754)   Receiving objects:  64% (483/754)   Receiving objects:  65% (491/754)   Receiving objects:  66% (498/754)   Receiving objects:  67% (506/754)   Receiving objects:  68% (513/754)   Receiving objects:  69% (521/754)   Receiving objects:  70% (528/754)   Receiving objects:  71% (536/754)   Receiving objects:  72% (543/754)   Receiving objects:  73% (551/754)   Receiving objects:  74% (558/754)   Receiving objects:  75% (566/754)   Receiving objects:  76% (574/754)   Receiving objects:  77% (581/754)   Receiving objects:  78% (589/754)   Receiving objects:  79% (596/754)   Receiving objects:  80% (604/754)   Receiving objects:  81% (611/754)   Receiving objects:  82% (619/754)   Receiving objects:  83% (626/754)   Receiving objects:  84% (634/754)   Receiving objects:  85% (641/754)   Receiving objects:  86% (649/754)   Receiving objects:  87% (656/754)   Receiving objects:  88% (664/754)   Receiving objects:  89% (672/754)   Receiving objects:  90% (679/754)   Receiving objects:  91% (687/754)   Receiving objects:  92% (694/754)   Receiving objects:  93% (702/754)   Receiving objects:  94% (709/754)   Receiving objects:  95% (717/754)   Receiving objects:  96% (724/754)   Receiving objects:  97% (732/754)   Receiving objects:  98% (739/754)   Receiving objects:  99% (747/754)   Receiving objects: 100% (754/754)   Receiving objects: 100% (754/754), 1.35 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/370)   Resolving deltas:  20% (75/370)   Resolving deltas:  21% (79/370)   Resolving deltas:  31% (115/370)   Resolving deltas:  37% (138/370)   Resolving deltas:  39% (147/370)   Resolving deltas:  50% (186/370)   Resolving deltas:  54% (203/370)   Resolving deltas:  55% (204/370)   Resolving deltas:  56% (208/370)   Resolving deltas:  66% (246/370)   Resolving deltas:  71% (266/370)   Resolving deltas:  74% (275/370)   Resolving deltas:  78% (292/370)   Resolving deltas:  81% (300/370)   Resolving deltas:  83% (308/370)   Resolving deltas:  88% (326/370)   Resolving deltas:  91% (338/370)   Resolving deltas:  92% (343/370)   Resolving deltas:  93% (345/370)   Resolving deltas:  95% (355/370)   Resolving deltas: 100% (370/370)   Resolving deltas: 100% (370/370), done.
++ cd xblock-azure-media-services
+++ git config --get remote.origin.url
+++ grep -o 'github.com.*'
+++ sed 's/\.git//g'
++ actualRemote=github.com/Microsoft/xblock-azure-media-services
+++ echo https://github.com/Microsoft/xblock-azure-media-services.git
+++ grep github.com/Microsoft/xblock-azure-media-services
+++ wc -l
++ count=1
++ [[ 1 -eq 0 ]]
++ git fetch
+++ git tag
+++ grep oxa_v2.1.1
+++ wc -l
++ count=0
++ ((  0 > 0  ))
++ git checkout master
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
++ git pull
+Already up-to-date.
++ git checkout -f 7df83f1
+Note: checking out '7df83f1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 7df83f1... support for more than one video per page/unit (#26)
+++ wc -l
+++ grep -i 7df83f1
+++ git rev-parse HEAD
++ count=1
++ [[ 1 -eq 0 ]]
++ git tag -a oxa_v2.1.1 7df83f1 -m 'minor prod deployment on 2017-04-24. Email content and styling. OpenedX on Azure (oxa).'
+++ wc -l
+++ grep oxa_v2.1.1
+++ get_current_local_tags
+++ prefix='tag: '
+++ set +e
++++ git tag -l --points-at HEAD
++++ sed -e 's/^/  /'
+++ tagInfo='  oxa_v2.1.0
+  oxa_v2.1.1'
+++ set -e
+++ '[' -z '  oxa_v2.1.0
+  oxa_v2.1.1' ']'
+++ echo '  oxa_v2.1.0
+  oxa_v2.1.1'
++ count=1
++ [[ 1 -eq 0 ]]
++ make_report 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 7df83f1' xblock-azure-media-services https://github.com/Microsoft/xblock-azure-media-services.git
++ report=
++ '[' -z https://github.com/Microsoft/xblock-azure-media-services.git ']'
++ report='SUCCESSFULLY created tag oxa_v2.1.1 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git'
++ echo 'SUCCESSFULLY created tag oxa_v2.1.1 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git'
+SUCCESSFULLY created tag oxa_v2.1.1 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
++ finalReport='\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git\n\n  SUCCESSFULLY created tag oxa_v2.1.1 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git'
++ git push --tags
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 222 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/xblock-azure-media-services.git
+ * [new tag]         oxa_v2.1.1 -> oxa_v2.1.1
++ read entry
++ echo
+
++ echo Summary:
+Summary:
++ echo -e '\n\n' SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: 'https://github.com/Microsoft/edx-configuration.git\n\n' SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: 'https://github.com/microsoft/edx-platform.git\n\n' SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: 'https://github.com/microsoft/edx-theme.git\n\n' SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: 'https://github.com/Microsoft/oxa_kitchen_sink.git\n\n' SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: 'https://github.com/Microsoft/oxa-tools.git\n\n' SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: 'https://github.com/microsoft/oxa-tools-config.git\n\n' SUCCESSFULLY created tag oxa_v2.1.1 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
+
+
+ SUCCESSFULLY created tag oxa_v2.1.1 at commit e5a47bd on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
+
+ SUCCESSFULLY created tag oxa_v2.1.1 at commit 6dbfd19 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git
+
+ SUCCESSFULLY created tag oxa_v2.1.1 at commit feefa37eab798aab053a9b7c0f809fec23913660 on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git
+
+ SUCCESSFULLY created tag oxa_v2.1.1 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
+
+ SUCCESSFULLY created tag oxa_v2.1.1 at commit 1b5b6b4 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git
+
+ SUCCESSFULLY created tag oxa_v2.1.1 at commit c2a5717d8cbfa155c1abd5219962f956f604a4d5 on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git
+
+ SUCCESSFULLY created tag oxa_v2.1.1 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
++ echo
+
+]0;localstepdo@x1v16stepdo1: ~/tags/makeGitTagslocalstepdo@x1v16stepdo1:~/tags/makeGitTags$ exit
+exit
+
+Script done on Mon 24 Apr 2017 02:57:14 PM PDT
