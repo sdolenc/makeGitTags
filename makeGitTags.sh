@@ -119,13 +119,13 @@ while read entry; do
     # Extract message. (restore spaces)
     tagMessage=`echo ${inputArray[5]} | tr '_' ' '`
 
-    echo $subFolder
-    echo $remoteUrl
-    echo $gitBranch
-    echo $hashValue
-    echo $newGitTag
-    echo "$tagMessage"
-    echo
+    #echo $subFolder
+    #echo $remoteUrl
+    #echo $gitBranch
+    #echo $hashValue
+    #echo $newGitTag
+    #echo "$tagMessage"
+    #echo
 
     cd $repoFolder
     # Update working directory
@@ -134,7 +134,10 @@ while read entry; do
     fi
     cd $subFolder
 
-    # Sync with remote (especially if the repo aleady existed locally)
+    # Important if the repo aleady existed locally:
+    #todo:1 verify upstream matches $remoteUrl
+
+    # 2 Sync with remote
     git fetch
 
     # Does tag already exist? Check all tags.
