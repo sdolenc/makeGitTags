@@ -11,17 +11,22 @@ help()
 {
     SCRIPT_NAME=`basename "$0"`
 
-    echo "This script $SCRIPT_NAME will tag a commit in a repository"
-    echo "Options:"
+    echo
+    echo " This script $SCRIPT_NAME will tag a commit in a repository"
+    echo " Options:"
     echo "  -r|--repo-folder-path   folder that contains repositories"
     echo "      will be created if doesn't exit and"
     echo "          repos will be cloned if missing"
     echo "  -t|--tag-info-file      specially formatted input file"
     echo "      <subFolder>,<remoteGitUrl>,<branch>,<commitHash>,<newTag>,<tagDesc>"
     echo "          Note: delimeters are commas so values shouldn't contain them"
-    echo "          Note: only tag descriptions should have spaces"
+    echo "                  (unless the values are wrapped in quotations)"
+    echo "          Note: only tag descriptions should have spaces."
+    echo "                  (spaces in other values will be interpreted as _)"
+    echo "          Note: commitHash is optional. An empty value ,, implies latest commit"
     echo
-    echo "Recommended: please use full paths insted of relative"
+    echo " Please use full paths insted of relative"
+    echo
     exit 2
 }
 
@@ -162,13 +167,18 @@ while read entry; do
     # This also allows us to validate local tag creation below.
     git checkout $gitBranch
     git pull
-    git checkout -f $hashValue
-    # Does long hash contain hash we tried to checkout?
-    count=`git rev-parse HEAD | grep -i $hashValue | wc -l`
-    if [[ "$count" -eq "0" ]]; then
-        make_report "FAILED to checkout hash $hashValue" "$subFolder" "$remoteUrl"
+    if [ -z $hashValue ]; then
+        # No commit hash provided. Use short hash from latest commit in desired branch.
+        hashValue=`git log --pretty=format:"%h" -1`
+    else
+        git checkout -f $hashValue
+        # Does long hash contain hash we tried to checkout?
+        count=`git rev-parse HEAD | grep -i $hashValue | wc -l`
+        if [[ "$count" -eq "0" ]]; then
+            make_report "FAILED to checkout hash $hashValue" "$subFolder" "$remoteUrl"
 
-        continue
+            continue
+        fi
     fi
 
     # Make tag
