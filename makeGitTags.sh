@@ -163,22 +163,26 @@ while read entry; do
         continue
     fi
 
-    # Ensure hash exists by jumping to that point in time.
-    # This also allows us to validate local tag creation below.
+    # Jump to latest commit for branch
     git checkout $gitBranch
     git pull
+
+    # Jump to commit hash.
     if [ -z $hashValue ]; then
         # No commit hash provided. Use short hash from latest commit in desired branch.
         hashValue=`git log --pretty=format:"%h" -1`
     else
+        # Ensure hash exists by jumping to that point in time.
+        # This also allows us to validate local tag creation below.
         git checkout -f $hashValue
-        # Does long hash contain hash we tried to checkout?
-        count=`git rev-parse HEAD | grep -i $hashValue | wc -l`
-        if [[ "$count" -eq "0" ]]; then
-            make_report "FAILED to checkout hash $hashValue" "$subFolder" "$remoteUrl"
+    fi
 
-            continue
-        fi
+    # Does current "long hash" contain the hash we expect?
+    count=`git rev-parse HEAD | grep -i $hashValue | wc -l`
+    if [[ "$count" -eq "0" ]]; then
+        make_report "FAILED to checkout hash $hashValue" "$subFolder" "$remoteUrl"
+
+        continue
     fi
 
     # Make tag
