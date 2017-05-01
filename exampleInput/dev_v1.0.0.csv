@@ -1,0 +1,7 @@
+edx-configuration,https://github.com/Microsoft/edx-configuration.git,oxa/devfic,,dev_v1.0.0,First tag for oxa dev branches
+edx-platform,https://github.com/microsoft/edx-platform.git,oxa/devfic,,dev_v1.0.0,First tag for oxa dev branches
+edx-theme,https://github.com/microsoft/edx-theme.git,oxa/devfic,,dev_v1.0.0,First tag for oxa dev branches
+oxa_kitchen_sink,https://github.com/Microsoft/oxa_kitchen_sink.git,dev,,dev_v1.0.0,First tag for oxa dev branches
+oxa-tools,https://github.com/Microsoft/oxa-tools.git,oxa/devfic,,dev_v1.0.0,First tag for oxa dev branches
+oxa-tools-config,https://github.com/microsoft/oxa-tools-config.git,oxa/devfic,,dev_v1.0.0,First tag for oxa dev branches
+xblock-azure-media-services,https://github.com/Microsoft/xblock-azure-media-services.git,dev,,dev_v1.0.0,First tag for oxa dev branches

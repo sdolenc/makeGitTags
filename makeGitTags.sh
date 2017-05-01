@@ -2,10 +2,12 @@
 # Copyright (c) Microsoft Corporation. All Rights Reserved.
 # Licensed under the MIT license. See LICENSE file on the project webpage for details.
 
+debug="false" # ="false" or =""
+
 tagFile=
 repoFolder=
 
-set -ex
+set -e
 
 help()
 {
@@ -14,11 +16,12 @@ help()
     echo
     echo " This script $SCRIPT_NAME will tag a commit in a repository"
     echo " Options:"
-    echo "  -r|--repo-folder-path   folder that contains repositories"
-    echo "      will be created if doesn't exit and"
-    echo "          repos will be cloned if missing"
+    echo "  -r|--repo-folder-path   folder that contains repositories will"
+    echo "                              be created if doesn't exit and"
+    echo "                              repos will be cloned if missing"
     echo "  -t|--tag-info-file      specially formatted input file"
     echo "      <subFolder>,<remoteGitUrl>,<branch>,<commitHash>,<newTag>,<tagDesc>"
+    echo
     echo "          Note: delimeters are commas so values shouldn't contain them"
     echo "                  (wrapping values in quotations is not a workaround)"
     echo "          Note: only tag descriptions should have spaces."
@@ -118,8 +121,8 @@ make_report()
 }
 
 while read entry; do
-    # Extract input. (spaces -> _ then commas -> spaces)
-    inputArray=(`echo "$entry" | tr ' ' '_' | tr ',' ' '`)
+    # Extract input. (empty cells like ,, -> ,"", ) THEN (spaces -> _ then commas -> spaces)
+    inputArray=(`echo "$entry" | sed 's/,,/,"",/g' | tr ' ' '_' | tr ',' ' '`)
     subFolder=${inputArray[0]}
     remoteUrl=${inputArray[1]}
     gitBranch=${inputArray[2]}
@@ -128,13 +131,18 @@ while read entry; do
     # Extract message. (restore spaces)
     tagMessage=`echo ${inputArray[5]} | tr '_' ' '`
 
-    #echo $subFolder
-    #echo $remoteUrl
-    #echo $gitBranch
-    #echo $hashValue
-    #echo $newGitTag
-    #echo "$tagMessage"
-    #echo
+    # Debugging input.
+    if [ -z $debug ]; then
+        echo $subFolder
+        echo $remoteUrl
+        echo $gitBranch
+        echo $hashValue
+        echo $newGitTag
+        echo "$tagMessage"
+        echo
+
+        continue
+    fi
 
     cd $repoFolder
     # Update working directory
@@ -168,9 +176,8 @@ while read entry; do
     git pull
 
     # Jump to commit hash.
-    if [ -z $hashValue ]; then
+    if [ -z $hashValue ] || [ $hashValue = '""' ]; then
         # No commit hash provided. Use short hash from latest commit in desired branch.
-        #todo:fix
         hashValue=`git log --pretty=format:"%h" -1`
     else
         # Ensure hash exists by jumping to that point in time.
