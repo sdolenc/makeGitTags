@@ -16,9 +16,11 @@ help()
     echo
     echo " This script $SCRIPT_NAME will tag a commit in a repository"
     echo " Options:"
+    echo
     echo "  -r|--repo-folder-path   folder that contains repositories will"
     echo "                              be created if doesn't exit and"
     echo "                              repos will be cloned if missing"
+    echo
     echo "  -t|--tag-info-file      specially formatted input file"
     echo "      <subFolder>,<remoteGitUrl>,<branch>,<commitHash>,<newTag>,<tagDesc>"
     echo
