@@ -80,8 +80,6 @@ validate_input()
 
 get_current_local_tags()
 {
-    prefix="tag: "
-
     # First see if there are named tag(s) for the current commit.
     # Allow errors. This syntax isn't supported on old versions of git (like 1.7.9.5)
     set +e
@@ -90,6 +88,7 @@ get_current_local_tags()
 
     # For old versions of git (like 1.7.9.5)
     if [ -z "$tagInfo" ]; then
+        prefix="tag: "
         # Get information, split into multiple lines, only keep values prefixed with 'tag:', remove prefix
         tagInfo=`git log -g --decorate -1 | tr ',' '\n' | tr ')' '\n' | grep -o -i "${prefix}.*" | sed "s/${prefix}/  /g"`
     fi
