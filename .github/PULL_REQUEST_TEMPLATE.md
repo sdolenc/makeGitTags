@@ -7,10 +7,10 @@
 
 #### What are the relevant TFS items? (list id numbers)
 
-#### Definition of Done:
-- [x] For large or complex change: please schedule an in-person review session
-- [ ] Add pull request hyperlink to relevant TFS items
+#### Definition of done:
 - [ ] Title of the pull request is clear and informative
+- [ ] Add pull request hyperlink to relevant TFS items
+- [x] For large or complex change: schedule an in-person review session
 
 [//]: # ( todo: Is there appropriate test coverage? )
 [//]: # ( todo: Does this PR require a new Selenium test? )

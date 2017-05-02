@@ -101,7 +101,7 @@ get_current_local_tags()
 make_report()
 {
     report=""
-    if [ -z $3 ]; then
+    if [ -z "$3" ]; then
         report="$1"
     else
         report="$1 on local: $2 and/or remote: $3"
