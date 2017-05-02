@@ -96,13 +96,6 @@ get_current_local_tags()
     echo "$tagInfo"
 }
 
-# Parse script argument(s)
-parse_args $@
-
-validate_input
-
-finalReport=
-
 make_report()
 {
     report=""
@@ -118,6 +111,13 @@ make_report()
     # Save message for later
     finalReport="${finalReport}\n\n  ${report}"
 }
+
+# Parse script argument(s)
+parse_args $@
+
+validate_input
+
+finalReport=
 
 while read entry; do
     # Extract input. (empty cells like ,, -> ,"", ) THEN (spaces -> _ then commas -> spaces)
