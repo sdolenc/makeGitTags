@@ -25,7 +25,7 @@
 1. Resolve relevant TFS items
 1. (reverse merge) If you merged into master then check to see if there are any changes in master that can be merged down to the development branch (like hotfixes, etc)
 
-[//]: # ( todo: verify changes in our "rolling deployment" environment. Notify stakeholders interested in or involved with the change )
+[//]: # ( todo: If you merged into development branch then verify change in our "rolling deployment" environment. Then notify stakeholder(s) interested in or involved with the change )
 
 
 [//]: # ( fyi: This content was heavily inspired by )
