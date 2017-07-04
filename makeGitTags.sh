@@ -2,7 +2,7 @@
 # Copyright (c) Microsoft Corporation. All Rights Reserved.
 # Licensed under the MIT license. See LICENSE file on the project webpage for details.
 
-debug="false" # ="false" or =""
+debug="true" # or =""
 
 tagFile=
 repoFolder=
@@ -68,12 +68,12 @@ parse_args()
 
 validate_input()
 {
-    if [ ! -d $repoFolder ]; then
+    if [[ ! -d $repoFolder ]] ; then
         mkdir -p $repoFolder
     fi
     cd $repoFolder
 
-    if [ ! -f $tagFile ]; then
+    if [[ ! -f $tagFile ]] ; then
         echo "tag info file required."
         echo "Path: $tagFile is not a file"
         help
@@ -89,7 +89,7 @@ get_current_local_tags()
     set -e
 
     # For old versions of git (like 1.7.9.5)
-    if [ -z "$tagInfo" ]; then
+    if [[ -z "$tagInfo" ]] ; then
         prefix="tag: "
         # Get information, split into multiple lines, only keep values prefixed with 'tag:', remove prefix
         tagInfo=`git log -g --decorate -1 | tr ',' '\n' | tr ')' '\n' | grep -o -i "${prefix}.*" | sed "s/${prefix}/  /g"`
@@ -101,7 +101,7 @@ get_current_local_tags()
 make_report()
 {
     report=""
-    if [ -z "$3" ]; then
+    if [[ -z "$3" ]] ; then
         report="$1"
     else
         report="$1 on local: $2 and/or remote: $3"
@@ -133,7 +133,7 @@ while read entry; do
     tagMessage=`echo ${inputArray[5]} | tr '_' ' '`
 
     # Debugging input.
-    if [ -z $debug ]; then
+    if [[ -n $debug ]] ; then
         echo $subFolder
         echo $remoteUrl
         echo $gitBranch
@@ -147,7 +147,7 @@ while read entry; do
 
     cd $repoFolder
     # Update working directory
-    if [ ! -d $subFolder ]; then
+    if [[ ! -d $subFolder ]] ; then
         git clone $remoteUrl $subFolder
     fi
     cd $subFolder
@@ -177,7 +177,7 @@ while read entry; do
     git pull
 
     # Jump to commit hash.
-    if [ -z $hashValue ] || [ $hashValue = '""' ]; then
+    if [[ -z $hashValue ]] || [[ $hashValue = '""' ]] ; then
         # No commit hash provided. Use short hash from latest commit in desired branch.
         hashValue=`git log --pretty=format:"%h" -1`
     else
