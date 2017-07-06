@@ -2,7 +2,7 @@
 # Copyright (c) Microsoft Corporation. All Rights Reserved.
 # Licensed under the MIT license. See LICENSE file on the project webpage for details.
 
-debug="false" # ="false" or =""
+debug="true" # or =""
 
 tagFile=
 repoFolder=
@@ -133,7 +133,7 @@ while read entry; do
     tagMessage=`echo ${inputArray[5]} | tr '_' ' '`
 
     # Debugging input.
-    if [[ -z $debug ]] ; then
+    if [[ -n $debug ]] ; then
         echo $subFolder
         echo $remoteUrl
         echo $gitBranch
