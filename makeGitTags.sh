@@ -159,7 +159,9 @@ while read entry ; do
         echo
     fi
     if [[ ! -d $subFolder ]] ; then
-        git clone $remoteUrl $subFolder
+        echo "cloning $remoteUrl to $subFolder directory"
+        echo "This may take a bit..."
+        git clone --quiet $remoteUrl $subFolder
     fi
 
     # Move into local git repo folder.
