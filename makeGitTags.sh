@@ -2,12 +2,10 @@
 # Copyright (c) Microsoft Corporation. All Rights Reserved.
 # Licensed under the MIT license. See LICENSE file on the project webpage for details.
 
-debug="true" # or =""
+debug="" # or ="true"
 
 tagFile=
 repoFolder=
-
-set -e
 
 help()
 {
@@ -22,13 +20,16 @@ help()
     echo "                              repos will be cloned if missing"
     echo
     echo "  -t|--tag-info-file      specially formatted input file"
-    echo "      <subFolder>,<remoteGitUrl>,<branch>,<commitHash>,<newTag>,<tagDesc>"
+    echo "      <subFolder>,<remoteGitUrl>,<branch>,<hashValue>,<newTag>,<tagDesc>"
     echo
     echo "          Note: delimeters are commas so values shouldn't contain them"
     echo "                  (wrapping values in quotations is not a workaround)"
     echo "          Note: only tag descriptions should have spaces."
     echo "                  (spaces in other values will be interpreted as _)"
-    echo "          Note: commitHash is optional. An empty value ,, implies latest commit" #todo:fix
+    echo "          Note: subFolder,hashValue are optional."
+    echo "                  subFolder=\"\" will use part of the URL"
+    echo "                      (matching the default clone behavior)"
+    echo "                  hashValue=\"\" will use the latest commit"
     echo
     echo " Please use full paths insted of relative"
     echo
@@ -38,8 +39,7 @@ help()
 # Parse script parameters
 parse_args()
 {
-    while [[ "$#" -gt 0 ]]
-        do
+    while [[ "$#" -gt 0 ]] ; do
 
         # Output parameters to facilitate troubleshooting
         echo "Option $1 set with value $2"
@@ -113,6 +113,10 @@ make_report()
     # Save message for later
     finalReport="${finalReport}\n\n  ${report}"
 }
+is_empty()
+{
+    [[ -z $1 ]] || [[ $1 == '""' ]] || [[ $1 == '""""' ]] || [[ $1 == '""""""' ]]
+}
 
 # Parse script argument(s)
 parse_args $@
@@ -121,7 +125,7 @@ validate_input
 
 finalReport=
 
-while read entry; do
+while read entry ; do
     # Extract input. (empty cells like ,, -> ,"", ) THEN (spaces -> _ then commas -> spaces)
     inputArray=(`echo "$entry" | sed 's/,,/,"",/g' | tr ' ' '_' | tr ',' ' '`)
     subFolder=${inputArray[0]}
@@ -132,24 +136,33 @@ while read entry; do
     # Extract message. (restore spaces)
     tagMessage=`echo ${inputArray[5]} | tr '_' ' '`
 
-    # Debugging input.
+    # Input
+    echo "subFolder:  $subFolder"
+    echo "remoteUrl:  $remoteUrl"
+    echo "gitBranch:  $gitBranch"
+    echo "hashValue:  $hashValue"
+    echo "newGitTag:  $newGitTag"
+    echo "tagMessage: $tagMessage"
+    echo
+    # Debugging
     if [[ -n $debug ]] ; then
-        echo $subFolder
-        echo $remoteUrl
-        echo $gitBranch
-        echo $hashValue
-        echo $newGitTag
-        echo "$tagMessage"
-        echo
-
         continue
     fi
 
+    # Reset working directory
     cd $repoFolder
-    # Update working directory
+
+    # Get local copy of the git repository.
+    if is_empty $subFolder ; then
+        subFolder=`basename "$remoteUrl" .git`
+        echo "new subFolder:  $subFolder"
+        echo
+    fi
     if [[ ! -d $subFolder ]] ; then
         git clone $remoteUrl $subFolder
     fi
+
+    # Move into local git repo folder.
     cd $subFolder
 
     # Important if the repo aleady existed locally:
@@ -177,7 +190,7 @@ while read entry; do
     git pull
 
     # Jump to commit hash.
-    if [[ -z $hashValue ]] || [[ $hashValue = '""' ]] ; then
+    if is_empty $hashValue ; then
         # No commit hash provided. Use short hash from latest commit in desired branch.
         hashValue=`git log --pretty=format:"%h" -1`
     else
