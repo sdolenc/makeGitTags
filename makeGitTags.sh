@@ -168,7 +168,7 @@ while read entry ; do
     # Important if the repo aleady existed locally:
     # 1 verify upstream matches $remoteUrl
     actualRemote=`git config --get remote.origin.url | grep -o 'github.com.*' | sed 's/\.git//g'`
-    count=`echo $remoteUrl | grep $actualRemote | wc -l`
+    count=`echo $remoteUrl | grep -i $actualRemote | wc -l`
     if [[ "$count" -eq "0" ]] ; then
         make_report "FAILED because local $subFolder is not pointed to expected remote $remoteUrl"
 
@@ -179,7 +179,7 @@ while read entry ; do
 
     # Does tag already exist? Check all tags.
     count=`git tag | grep $newGitTag | wc -l`
-    if (( "$count" > "0" )); then
+    if (( "$count" > "0" )) ; then
         make_report "Tag $newGitTag already exists" "$subFolder" "$remoteUrl"
 
         continue

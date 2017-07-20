@@ -1,0 +1,142 @@
+Script started on Thu 20 Jul 2017 01:41:00 PM PDT
+]0;localstepdo@x1v16stepdo1: ~/e/makeGitTagslocalstepdo@x1v16stepdo1:~/e/makeGitTags$ bash makeGitTags.sh -t /home/localstepdo/e/makeGitTags/exampleInput/oxa_v2.3.0.csv -r /home/localstepdo/e/rc23
+Option -t set with value /home/localstepdo/e/makeGitTags/exampleInput/oxa_v2.3.0.csv
+Option -r set with value /home/localstepdo/e/rc23
+subFolder:  """"""
+remoteUrl:  https://github.com/Microsoft/edx-configuration.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.3.0
+tagMessage: prod deployment on 2017-07-20 OpenedX on Azure (oxa).
+
+new subFolder:  edx-configuration
+
+Already on 'oxa/master.fic'
+Your branch is up-to-date with 'origin/oxa/master.fic'.
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.3.0 at commit 5af3ee246 on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 197 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/edx-configuration
+ * [new tag]             oxa_v2.3.0 -> oxa_v2.3.0
+subFolder:  """"""
+remoteUrl:  https://github.com/microsoft/edx-platform.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.3.0
+tagMessage: prod deployment on 2017-07-20 OpenedX on Azure (oxa).
+
+new subFolder:  edx-platform
+
+FAILED because local edx-platform is not pointed to expected remote https://github.com/microsoft/edx-platform.git
+subFolder:  """"""
+remoteUrl:  https://github.com/microsoft/edx-theme.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.3.0
+tagMessage: prod deployment on 2017-07-20 OpenedX on Azure (oxa).
+
+new subFolder:  edx-theme
+
+FAILED because local edx-theme is not pointed to expected remote https://github.com/microsoft/edx-theme.git
+subFolder:  """"""
+remoteUrl:  https://github.com/Microsoft/oxa_kitchen_sink.git
+gitBranch:  master
+hashValue:  """"""
+newGitTag:  oxa_v2.3.0
+tagMessage: prod deployment on 2017-07-20 OpenedX on Azure (oxa).
+
+new subFolder:  oxa_kitchen_sink
+
+Cloning into 'oxa_kitchen_sink'...
+remote: Counting objects: 242, done.[K
+Receiving objects:   0% (1/242)   Receiving objects:   1% (3/242)   Receiving objects:   2% (5/242)   Receiving objects:   3% (8/242)   Receiving objects:   4% (10/242)   Receiving objects:   5% (13/242)   Receiving objects:   6% (15/242)   Receiving objects:   7% (17/242)   Receiving objects:   8% (20/242)   Receiving objects:   9% (22/242)   Receiving objects:  10% (25/242)   Receiving objects:  11% (27/242)   Receiving objects:  12% (30/242)   Receiving objects:  13% (32/242)   Receiving objects:  14% (34/242)   Receiving objects:  15% (37/242)   Receiving objects:  16% (39/242)   Receiving objects:  17% (42/242)   Receiving objects:  18% (44/242)   Receiving objects:  19% (46/242)   Receiving objects:  20% (49/242)   Receiving objects:  21% (51/242)   Receiving objects:  22% (54/242)   Receiving objects:  23% (56/242)   Receiving objects:  24% (59/242)   Receiving objects:  25% (61/242)   Receiving objects:  26% (63/242)   Receiving objects:  27% (66/242)   Receiving objects:  28% (68/242)   Receiving objects:  29% (71/242)   Receiving objects:  30% (73/242)   Receiving objects:  31% (76/242)   Receiving objects:  32% (78/242)   Receiving objects:  33% (80/242)   Receiving objects:  34% (83/242)   Receiving objects:  35% (85/242)   Receiving objects:  36% (88/242)   Receiving objects:  37% (90/242)   Receiving objects:  38% (92/242)   Receiving objects:  39% (95/242)   Receiving objects:  40% (97/242)   Receiving objects:  41% (100/242)   Receiving objects:  42% (102/242)   Receiving objects:  43% (105/242)   Receiving objects:  44% (107/242)   Receiving objects:  45% (109/242)   Receiving objects:  46% (112/242)   Receiving objects:  47% (114/242)   Receiving objects:  48% (117/242)   Receiving objects:  49% (119/242)   Receiving objects:  50% (121/242)   Receiving objects:  51% (124/242)   Receiving objects:  52% (126/242)   Receiving objects:  53% (129/242)   Receiving objects:  54% (131/242)   Receiving objects:  55% (134/242)   Receiving objects:  56% (136/242)   Receiving objects:  57% (138/242)   Receiving objects:  58% (141/242)   Receiving objects:  59% (143/242)   Receiving objects:  60% (146/242)   Receiving objects:  61% (148/242)   Receiving objects:  62% (151/242)   Receiving objects:  63% (153/242)   Receiving objects:  64% (155/242)   Receiving objects:  65% (158/242)   Receiving objects:  66% (160/242)   Receiving objects:  67% (163/242)   Receiving objects:  68% (165/242)   remote: Total 242 (delta 0), reused 1 (delta 0), pack-reused 241[K
+Receiving objects:  69% (167/242)   Receiving objects:  70% (170/242)   Receiving objects:  71% (172/242)   Receiving objects:  72% (175/242)   Receiving objects:  73% (177/242)   Receiving objects:  74% (180/242)   Receiving objects:  75% (182/242)   Receiving objects:  76% (184/242)   Receiving objects:  77% (187/242)   Receiving objects:  78% (189/242)   Receiving objects:  79% (192/242)   Receiving objects:  80% (194/242)   Receiving objects:  81% (197/242)   Receiving objects:  82% (199/242)   Receiving objects:  83% (201/242)   Receiving objects:  84% (204/242)   Receiving objects:  85% (206/242)   Receiving objects:  86% (209/242)   Receiving objects:  87% (211/242)   Receiving objects:  88% (213/242)   Receiving objects:  89% (216/242)   Receiving objects:  90% (218/242)   Receiving objects:  91% (221/242)   Receiving objects:  92% (223/242)   Receiving objects:  93% (226/242)   Receiving objects:  94% (228/242)   Receiving objects:  95% (230/242)   Receiving objects:  96% (233/242)   Receiving objects:  97% (235/242)   Receiving objects:  98% (238/242)   Receiving objects:  99% (240/242)   Receiving objects: 100% (242/242)   Receiving objects: 100% (242/242), 399.10 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/68)   Resolving deltas:   1% (1/68)   Resolving deltas:   2% (2/68)   Resolving deltas:   4% (3/68)   Resolving deltas:   5% (4/68)   Resolving deltas:  11% (8/68)   Resolving deltas:  19% (13/68)   Resolving deltas:  20% (14/68)   Resolving deltas:  23% (16/68)   Resolving deltas:  25% (17/68)   Resolving deltas:  42% (29/68)   Resolving deltas:  51% (35/68)   Resolving deltas:  52% (36/68)   Resolving deltas:  54% (37/68)   Resolving deltas:  55% (38/68)   Resolving deltas:  57% (39/68)   Resolving deltas:  61% (42/68)   Resolving deltas:  63% (43/68)   Resolving deltas:  64% (44/68)   Resolving deltas:  66% (45/68)   Resolving deltas:  67% (46/68)   Resolving deltas:  69% (47/68)   Resolving deltas:  75% (51/68)   Resolving deltas:  76% (52/68)   Resolving deltas:  88% (60/68)   Resolving deltas:  89% (61/68)   Resolving deltas:  98% (67/68)   Resolving deltas: 100% (68/68)   Resolving deltas: 100% (68/68), done.
+Branch master set up to track remote branch master from origin.
+Switched to a new branch 'master'
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.3.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 199 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/oxa_kitchen_sink.git
+ * [new tag]         oxa_v2.3.0 -> oxa_v2.3.0
+subFolder:  """"""
+remoteUrl:  https://github.com/Microsoft/oxa-tools.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.3.0
+tagMessage: prod deployment on 2017-07-20 OpenedX on Azure (oxa).
+
+new subFolder:  oxa-tools
+
+Already on 'oxa/master.fic'
+Your branch is up-to-date with 'origin/oxa/master.fic'.
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.3.0 at commit fa75413 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 198 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/oxa-tools
+ * [new tag]         oxa_v2.3.0 -> oxa_v2.3.0
+subFolder:  """"""
+remoteUrl:  https://github.com/microsoft/oxa-tools-config.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.3.0
+tagMessage: prod deployment on 2017-07-20 OpenedX on Azure (oxa).
+
+new subFolder:  oxa-tools-config
+
+FAILED because local oxa-tools-config is not pointed to expected remote https://github.com/microsoft/oxa-tools-config.git
+subFolder:  """"""
+remoteUrl:  https://github.com/Microsoft/xblock-azure-media-services.git
+gitBranch:  master
+hashValue:  """"""
+newGitTag:  oxa_v2.3.0
+tagMessage: prod deployment on 2017-07-20 OpenedX on Azure (oxa).
+
+new subFolder:  xblock-azure-media-services
+
+Cloning into 'xblock-azure-media-services'...
+remote: Counting objects: 758, done.[K
+Receiving objects:   0% (1/758)   Receiving objects:   1% (8/758)   Receiving objects:   2% (16/758)   Receiving objects:   3% (23/758)   Receiving objects:   4% (31/758)   Receiving objects:   5% (38/758)   Receiving objects:   6% (46/758)   Receiving objects:   7% (54/758)   Receiving objects:   8% (61/758)   Receiving objects:   9% (69/758)   Receiving objects:  10% (76/758)   Receiving objects:  11% (84/758)   Receiving objects:  12% (91/758)   Receiving objects:  13% (99/758)   Receiving objects:  14% (107/758)   Receiving objects:  15% (114/758)   Receiving objects:  16% (122/758)   Receiving objects:  17% (129/758)   Receiving objects:  18% (137/758)   Receiving objects:  19% (145/758)   Receiving objects:  20% (152/758)   Receiving objects:  21% (160/758)   Receiving objects:  22% (167/758)   Receiving objects:  23% (175/758)   Receiving objects:  24% (182/758)   Receiving objects:  25% (190/758)   Receiving objects:  26% (198/758)   Receiving objects:  27% (205/758)   remote: Total 758 (delta 0), reused 1 (delta 0), pack-reused 757[K
+Receiving objects:  28% (213/758)   Receiving objects:  29% (220/758)   Receiving objects:  30% (228/758)   Receiving objects:  31% (235/758)   Receiving objects:  32% (243/758)   Receiving objects:  33% (251/758)   Receiving objects:  34% (258/758)   Receiving objects:  35% (266/758)   Receiving objects:  36% (273/758)   Receiving objects:  37% (281/758)   Receiving objects:  38% (289/758)   Receiving objects:  39% (296/758)   Receiving objects:  40% (304/758)   Receiving objects:  41% (311/758)   Receiving objects:  42% (319/758)   Receiving objects:  43% (326/758)   Receiving objects:  44% (334/758)   Receiving objects:  45% (342/758)   Receiving objects:  46% (349/758)   Receiving objects:  47% (357/758)   Receiving objects:  48% (364/758)   Receiving objects:  49% (372/758)   Receiving objects:  50% (379/758)   Receiving objects:  51% (387/758)   Receiving objects:  52% (395/758)   Receiving objects:  53% (402/758)   Receiving objects:  54% (410/758)   Receiving objects:  55% (417/758)   Receiving objects:  56% (425/758)   Receiving objects:  57% (433/758)   Receiving objects:  58% (440/758)   Receiving objects:  59% (448/758)   Receiving objects:  60% (455/758)   Receiving objects:  61% (463/758)   Receiving objects:  62% (470/758)   Receiving objects:  63% (478/758)   Receiving objects:  64% (486/758)   Receiving objects:  65% (493/758)   Receiving objects:  66% (501/758)   Receiving objects:  67% (508/758)   Receiving objects:  68% (516/758)   Receiving objects:  69% (524/758)   Receiving objects:  70% (531/758)   Receiving objects:  71% (539/758)   Receiving objects:  72% (546/758)   Receiving objects:  73% (554/758)   Receiving objects:  74% (561/758)   Receiving objects:  75% (569/758)   Receiving objects:  76% (577/758)   Receiving objects:  77% (584/758)   Receiving objects:  78% (592/758)   Receiving objects:  79% (599/758)   Receiving objects:  80% (607/758)   Receiving objects:  81% (614/758)   Receiving objects:  82% (622/758)   Receiving objects:  83% (630/758)   Receiving objects:  84% (637/758)   Receiving objects:  85% (645/758)   Receiving objects:  86% (652/758)   Receiving objects:  87% (660/758)   Receiving objects:  88% (668/758)   Receiving objects:  89% (675/758)   Receiving objects:  90% (683/758)   Receiving objects:  91% (690/758)   Receiving objects:  92% (698/758)   Receiving objects:  93% (705/758)   Receiving objects:  94% (713/758)   Receiving objects:  95% (721/758)   Receiving objects:  96% (728/758)   Receiving objects:  97% (736/758)   Receiving objects:  98% (743/758)   Receiving objects:  99% (751/758)   Receiving objects: 100% (758/758)   Receiving objects: 100% (758/758), 1.35 MiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/370)   Resolving deltas:   1% (4/370)   Resolving deltas:  34% (129/370)   Resolving deltas:  35% (130/370)   Resolving deltas:  37% (138/370)   Resolving deltas:  45% (168/370)   Resolving deltas:  47% (174/370)   Resolving deltas:  48% (181/370)   Resolving deltas:  50% (185/370)   Resolving deltas:  51% (191/370)   Resolving deltas:  55% (205/370)   Resolving deltas:  62% (230/370)   Resolving deltas:  75% (279/370)   Resolving deltas:  78% (290/370)   Resolving deltas:  82% (307/370)   Resolving deltas:  85% (315/370)   Resolving deltas:  87% (323/370)   Resolving deltas:  92% (341/370)   Resolving deltas:  95% (353/370)   Resolving deltas:  96% (358/370)   Resolving deltas:  97% (360/370)   Resolving deltas: 100% (370/370)   Resolving deltas: 100% (370/370), done.
+Branch master set up to track remote branch master from origin.
+Switched to a new branch 'master'
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.3.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 198 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/xblock-azure-media-services.git
+ * [new tag]         oxa_v2.3.0 -> oxa_v2.3.0
+
+Summary:
+
+
+ SUCCESSFULLY created tag oxa_v2.3.0 at commit 5af3ee246 on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
+
+ FAILED because local edx-platform is not pointed to expected remote https://github.com/microsoft/edx-platform.git
+
+ FAILED because local edx-theme is not pointed to expected remote https://github.com/microsoft/edx-theme.git
+
+ SUCCESSFULLY created tag oxa_v2.3.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
+
+ SUCCESSFULLY created tag oxa_v2.3.0 at commit fa75413 on local: oxa-tools and/or remote: https://github.com/Microsoft/oxa-tools.git
+
+ FAILED because local oxa-tools-config is not pointed to expected remote https://github.com/microsoft/oxa-tools-config.git
+
+ SUCCESSFULLY created tag oxa_v2.3.0 at commit 7df83f1 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
+
+]0;localstepdo@x1v16stepdo1: ~/e/makeGitTagslocalstepdo@x1v16stepdo1:~/e/makeGitTags$ exit
+exit
+
+Script done on Thu 20 Jul 2017 01:42:21 PM PDT
