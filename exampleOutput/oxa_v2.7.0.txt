@@ -1,0 +1,153 @@
+Script started on Mon 09 Oct 2017 09:39:30 AM PDT
+]0;localstepdo@x1v16stepdo8: ~/e/makegittagslocalstepdo@x1v16stepdo8:~/e/makegittags$ exitbash makeGitTags.sh -r /tmp/e -t `pwd`/exampleInput/oxa_v2.7.0.csv[1P[1@f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Option -r set with value /tmp/f
+Option -t set with value /home/localstepdo/e/makegittags/exampleInput/oxa_v2.7.0.csv
+subFolder:  """"""
+remoteUrl:  https://github.com/Microsoft/edx-configuration.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.7.0
+tagMessage: "prod deployment on Sep 5
+
+new subFolder:  edx-configuration
+
+cloning https://github.com/Microsoft/edx-configuration.git to edx-configuration directory
+This may take a bit...
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.7.0 at commit 598e7ff on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
+Username for 'https://github.com': 
+Password for 'https://github.com': 
+remote: Anonymous access to Microsoft/edx-configuration.git denied.
+fatal: Authentication failed for 'https://github.com/Microsoft/edx-configuration.git/'
+subFolder:  """"""
+remoteUrl:  https://github.com/microsoft/edx-platform.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.7.0
+tagMessage: "prod deployment on Sep 5
+
+new subFolder:  edx-platform
+
+cloning https://github.com/microsoft/edx-platform.git to edx-platform directory
+This may take a bit...
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.7.0 at commit 19bc080 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git
+Username for 'https://github.com': 
+Password for 'https://github.com': 
+remote: Anonymous access to microsoft/edx-platform.git denied.
+fatal: Authentication failed for 'https://github.com/microsoft/edx-platform.git/'
+subFolder:  """"""
+remoteUrl:  https://github.com/microsoft/edx-theme.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.7.0
+tagMessage: "prod deployment on Sep 5
+
+new subFolder:  edx-theme
+
+cloning https://github.com/microsoft/edx-theme.git to edx-theme directory
+This may take a bit...
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.7.0 at commit 4e1a63c on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git
+Username for 'https://github.com': 
+Password for 'https://github.com': 
+remote: Anonymous access to microsoft/edx-theme.git denied.
+fatal: Authentication failed for 'https://github.com/microsoft/edx-theme.git/'
+subFolder:  """"""
+remoteUrl:  https://github.com/Microsoft/oxa_kitchen_sink.git
+gitBranch:  master
+hashValue:  """"""
+newGitTag:  oxa_v2.7.0
+tagMessage: "prod deployment on Sep 5
+
+new subFolder:  oxa_kitchen_sink
+
+cloning https://github.com/Microsoft/oxa_kitchen_sink.git to oxa_kitchen_sink directory
+This may take a bit...
+Branch master set up to track remote branch master from origin.
+Switched to a new branch 'master'
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.7.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 179 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/oxa_kitchen_sink.git
+ * [new tag]         oxa_v2.7.0 -> oxa_v2.7.0
+subFolder:  """"""
+remoteUrl:  https://github.com/microsoft/oxa-tools-config.git
+gitBranch:  oxa/master.fic
+hashValue:  """"""
+newGitTag:  oxa_v2.7.0
+tagMessage: "prod deployment on Sep 5
+
+new subFolder:  oxa-tools-config
+
+cloning https://github.com/microsoft/oxa-tools-config.git to oxa-tools-config directory
+This may take a bit...
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Branch oxa/master.fic set up to track remote branch oxa/master.fic from origin.
+Switched to a new branch 'oxa/master.fic'
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.7.0 at commit 516157e on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 180 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/microsoft/oxa-tools-config.git
+ * [new tag]         oxa_v2.7.0 -> oxa_v2.7.0
+subFolder:  """"""
+remoteUrl:  https://github.com/Microsoft/xblock-azure-media-services.git
+gitBranch:  master
+hashValue:  """"""
+newGitTag:  oxa_v2.7.0
+tagMessage: "prod deployment on Sep 5
+
+new subFolder:  xblock-azure-media-services
+
+cloning https://github.com/Microsoft/xblock-azure-media-services.git to xblock-azure-media-services directory
+This may take a bit...
+Branch master set up to track remote branch master from origin.
+Switched to a new branch 'master'
+Already up-to-date.
+SUCCESSFULLY created tag oxa_v2.7.0 at commit ea85ba9 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
+Username for 'https://github.com': sdolenc
+Password for 'https://sdolenc@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1)   Writing objects: 100% (1/1), 179 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Microsoft/xblock-azure-media-services.git
+ * [new tag]         oxa_v2.7.0 -> oxa_v2.7.0
+
+Summary:
+
+
+ SUCCESSFULLY created tag oxa_v2.7.0 at commit 598e7ff on local: edx-configuration and/or remote: https://github.com/Microsoft/edx-configuration.git
+
+ SUCCESSFULLY created tag oxa_v2.7.0 at commit 19bc080 on local: edx-platform and/or remote: https://github.com/microsoft/edx-platform.git
+
+ SUCCESSFULLY created tag oxa_v2.7.0 at commit 4e1a63c on local: edx-theme and/or remote: https://github.com/microsoft/edx-theme.git
+
+ SUCCESSFULLY created tag oxa_v2.7.0 at commit 0698a4e on local: oxa_kitchen_sink and/or remote: https://github.com/Microsoft/oxa_kitchen_sink.git
+
+ SUCCESSFULLY created tag oxa_v2.7.0 at commit 516157e on local: oxa-tools-config and/or remote: https://github.com/microsoft/oxa-tools-config.git
+
+ SUCCESSFULLY created tag oxa_v2.7.0 at commit ea85ba9 on local: xblock-azure-media-services and/or remote: https://github.com/Microsoft/xblock-azure-media-services.git
+
+]0;localstepdo@x1v16stepdo8: ~/e/makegittagslocalstepdo@x1v16stepdo8:~/e/makegittags$ exit
+exit
+
+Script done on Mon 09 Oct 2017 09:43:08 AM PDT
